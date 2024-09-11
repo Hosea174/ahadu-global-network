@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('/fonts/Mona-Sans.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aulia Grotesk';
+  src: url('/fonts/Aulia Grotesk.otf') format('otf');
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-header-1 {
+  font-family: $ff-header;
+  font-size: $fs-h1;
+  color: $clr-neutral-100;
+  text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+  line-height: normal;
+  font-weight: $fw-regular;
+}
+
+.font-header-2 {
+  font-family: $ff-header;
+  font-size: $fs-h2;
+  color: $clr-neutral-900;
+  line-height: normal;
+  font-weight: $fw-regular;
+}
+
+.font-header-3 {
+  font-family: $ff-body;
+  font-size: $fs-h3;
+  color: $clr-neutral-900;
+  line-height: normal;
+  font-weight: $fw-bold;
+}
+
+body {
+  font-family: $ff-body;
+  font-size: $fs-body;
+  line-height: normal;
+}

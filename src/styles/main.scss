@@ -1,5 +1,31 @@
-@use 'variables';
+@use 'variables' as *;
 @use 'reset';
 @use 'typography';
+
+// Components
 @use 'components/button';
 @use 'components/header';
+@use 'components/footer';
+
+// Utility classes
+.container {
+  max-width: 1450px;
+  padding-inline: $size-300;
+  margin: 0 auto;
+}
+
+.fw-regular {
+  font-weight: $fw-regular;
+}
+
+.fw-semi-bold {
+  font-weight: $fw-semi-bold;
+}
+
+.fw-bold {
+  font-weight: $fw-bold;
+}
+
+.text-center {
+  text-align: center;
+}
