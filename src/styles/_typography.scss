@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Aulia Grotesk';
-  src: url('/fonts/Aulia Grotesk.otf') format('otf');
+  src: url('/fonts/Aulia Grotesk.woff') format('woff');
   font-style: normal;
   font-display: swap;
 }
@@ -42,5 +42,13 @@
 body {
   font-family: $ff-body;
   font-size: $fs-body;
-  line-height: normal;
+  line-height: 28px;
+}
+
+.footer-heading {
+  color: #EEEBEB;
+  font-size: 21px;
+  font-weight: $fw-semi-bold;
+  text-decoration: underline;
+  margin-bottom: 1.2rem;
 }

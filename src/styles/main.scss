@@ -10,7 +10,7 @@
 // Utility classes
 .container {
   max-width: 1450px;
-  padding-inline: $size-300;
+  padding-inline: $size-600;
   margin: 0 auto;
 }
 
@@ -28,4 +28,12 @@
 
 .text-center {
   text-align: center;
+}
+
+.label-highlight {
+  font-weight: $fw-semi-bold;
+  padding: 9px 18px;
+  border-radius: 80px;
+  background: linear-gradient(90deg, rgba(255, 211, 211, 0.82) 0%, rgba(238, 244, 247, 0.82) 100%);
+  backdrop-filter: blur(2px);
 }

@@ -1,0 +1,44 @@
+@use '../variables' as *;
+
+footer {
+  background-color: $clr-neutral-800;
+
+  .footer-wrapper {
+    color: #EEEBEB;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    // gap: 2rem;
+
+    .col-1 {
+      max-width: 350px;
+
+      .social-links {
+        display: flex;
+        gap: .4rem;
+        margin-block: 1rem;        
+        svg {
+          background-image: linear-gradient(90deg, rgba(238, 250, 255, 0.82) 0%, rgba(255, 211, 211, 0.82) 100%);
+          border-radius: 50%;
+        }
+      }
+
+      hr {
+        background-color: #ffffffaa;
+        margin-block: 1rem;
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .footer-links li,
+    .contact-info {
+      margin-bottom: .35rem;
+    }
+  }
+}

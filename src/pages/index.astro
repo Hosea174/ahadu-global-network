@@ -1,8 +1,28 @@
 ---
-// Component imports
+// Components
+import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+// styles
+import "../styles/pages/_index.scss";
+
+// assets
+import glow from "../assets/glowing-eclipse.svg";
+import photo1 from "../assets/photo1.png";
+import photo2 from "../assets/photo2.png";
+import photo3 from "../assets/photo3.png";
+import photo4 from "../assets/photo4.png";
+import cameraEquipment from "../assets/camera-equipment.png";
+import carouselGallery from "../assets/carousel-gallery.png";
+// icons
+import audioElement from "../icons/audio-element.svg";
+import budgetIcon from "../icons/budget-icon.svg";
+import locationIcon from "../icons/location-icon.svg";
+import techIcon from "../icons/tech-icon.svg";
+import reliabilityIcon from "../icons/reliability-icon.svg";
 ---
 
 <Layout
@@ -12,9 +32,267 @@ import Layout from "../layouts/Layout.astro";
   <Header />
 
   <main>
-    <h1>Welcome to My Site</h1>
-    <p>This is the index page of my Astro website.</p>
-  </main>
+    <section class="hero-section">
+      <div class="container wrapper">
+        <div class="hero-bg-wrap">
+          <div class="hero-text-box">
+            <h1 class="font-header-1">
+              Revolutionizing Media Production with AGN Studios
+            </h1>
+            <p>
+              We are a premier studio rental company based in the heart of
+              Washington D.C., dedicated to providing top-notch broadcast
+              solutions.
+            </p>
+            <Button
+              href="/contact"
+              text="Get in Touch"
+              class="btn-primary fw-semi-bold"
+              icon="message"
+            />
+          </div>
 
-  <Footer />
+          <div class="hero-bottom-wrap">
+            <div class="navigation">
+              <span class="prev nav-arrow">
+                <Icon name="arrow" width={22} />
+              </span>
+              <span class="next nav-arrow">
+                <Icon name="arrow" width={22} />
+              </span>
+            </div>
+            <div class="social-links">
+              <Icon name="facebook" width={28} height={28} />
+              <Icon name="twitter" width={28} height={28} />
+              <Icon name="youtube" width={28} height={28} />
+              <Icon name="instagram" width={28} height={28} />
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-studios">
+          <div class="studios-container">
+            <a href="/" class="studio"
+              ><span class="label-highlight">Studio 1</span></a
+            >
+            <a href="/" class="studio"
+              ><span class="label-highlight">Studio 2</span></a
+            >
+            <a href="/" class="studio"
+              ><span class="label-highlight">Virtual Studio</span></a
+            >
+            <a href="/" class="studio"
+              ><span class="label-highlight">Green Screen</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container wrapper">
+        <img src={glow.src} alt="" class="glow-effect" />
+        <div class="about-text text-center">
+          <span class="label-highlight">About AGN</span>
+          <h2 class="font-header-2">
+            A High-End Studio That Accommodates All of your Production Needs
+          </h2>
+          <p>
+            Welcome to AGN Studios, DC's top production hub. We specialize in
+            live production, providing elite media services to help clients
+            connect with their audience. Access our cutting-edge equipment and
+            studio facilities with affordable rental options.
+          </p>
+          <Button
+            text="Learn More"
+            class="btn-secondary fw-semi-bold btn-dark"
+            href="/about"
+            icon="btn-arrow-dark"
+          />
+          <Icon name="arrow-down" size={150} />
+        </div>
+        <div class="about-images">
+          <div class="image-wrap left">
+            <img class="photo1" src={photo1.src} alt="About AGN" />
+            <img class="photo2" src={photo2.src} alt="About AGN" />
+          </div>
+          <div class="image-wrap right">
+            <img class="photo3" src={photo3.src} alt="About AGN" />
+            <img class="photo4" src={photo4.src} alt="About AGN" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="container wrapper">
+        <div class="row-1">
+          <div class="services-header">
+            <span class="label-highlight">Our Services</span>
+            <h2 class="font-header-1">
+              Experience world-class services from our team of exceptional
+              talents
+            </h2>
+          </div>
+          <img src={cameraEquipment.src} alt="" />
+        </div>
+        <div class="row-2">
+          <Button
+            text="Explore Services"
+            class="btn-secondary btn-light"
+            href="/services"
+            icon="btn-arrow-light"
+          />
+          <p class="services-description">
+            We pride ourselves on our exceptional team of talented professionals
+            and our wide range of media production services. Our team has years
+            of experience in the industry, and they are passionate about helping
+            clients bring their visions to life. We offer a variety of services,
+            including live production, media services, studio rentals,
+            post-production, live streaming, and more!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-section">
+      <div class="container wrapper">
+        <img src={glow.src} alt="" class="glow-effect" />
+
+        <div class="why-header">
+          <div class="header-text">
+            <span class="label-highlight">Why Choose AGN?</span>
+            <h2 class="font-header-2">
+              We're Your Trusted Source for Exceptional Media Production, with
+              Qualities That Set Us Apart
+            </h2>
+          </div>
+          <img src={audioElement.src} alt="" />
+        </div>
+
+        <div class="reasons-box">
+          <div class="reason">
+            <img src={locationIcon.src} alt="" />
+            <h3 class="font-header-3">Convenient Location</h3>
+            <p class="reason-description">
+              Located in the heart of Washington DC, Ahadu Global Network is
+              easily accessible. Our convenient location means you can focus on
+              your project, not your commute.
+            </p>
+          </div>
+
+          <div class="reason">
+            <img src={budgetIcon.src} alt="" />
+            <h3 class="font-header-3">Budget-Friendly Solutions</h3>
+            <p class="reason-description">
+              Don't let budget constraints hold back your creative vision. Our
+              affordable pricing plans make high-quality media production
+              accessible to everyone.
+            </p>
+          </div>
+
+          <div class="reason">
+            <img src={techIcon.src} alt="" />
+            <h3 class="font-header-3">State-of-the-art Technology</h3>
+            <p class="reason-description">
+              Stay ahead of the curve with our cutting-edge equipment and
+              software. We invest in the latest technology to ensure that your
+              productions are always top-notch.
+            </p>
+          </div>
+
+          <div class="reason">
+            <img src={reliabilityIcon.src} alt="" />
+            <h3 class="font-header-3">Proven Reliability</h3>
+            <p class="reason-description">
+              When you choose Ahadu Global Network, you're choosing a partner
+              you can trust. Our track record of delivering projects on time and
+              within budget speaks for itself.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container wrapper">
+        <img src={glow.src} alt="" class="glow-effect" />
+        <div class="gallery-header">
+          <span class="label-highlight">Our Gallery</span>
+          <h2 class="font-header-2 text-center">
+            Explore Our Studio and Equipment Gallery
+          </h2>
+        </div>
+
+        <div class="gallery-wrap">
+          <div class="img-carousel">
+            <img src={carouselGallery.src} alt="" />
+          </div>
+          <div class="gallery-text">
+            <p class="fw-semi-bold">
+              From cameras to lighting and everything in between, discover the
+              top-tier equipment we provide to ensure your production runs
+              seamlessly and delivers professional results.
+            </p>
+            <Button
+              text="View Gallery"
+              class="btn-primary"
+              href="/gallery"
+              icon="btn-arrow-dark"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container wrapper">
+        <div class="cta-content">
+          <span class="label-highlight">Let's Work Together</span>
+          <h2 class="font-header-2">
+            An All-in-one Media production company that brings your vision to
+            life
+          </h2>
+          <p>
+            From concept to completion, our all-in-one media production services
+            offer the expertise, equipment, and creativity you need to bring
+            your vision to life, whether you're streaming a live event,
+            producing a commercial, or renting a studio space.
+          </p>
+          <Button
+            text="Contact Us"
+            class="btn-primary"
+            href="/contact"
+            icon="btn-arrow-dark"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="wrapper container">
+        <img src={glow.src} alt="" class="glow-effect" />
+        <div class="newsletter-content text-center">
+          <span class="label-highlight">Email Newsletter</span>
+          <h2 class="font-header-2">
+            Stay in the loop! Be the first to know about our latest projects,
+            insider tips, and exclusive updates.
+          </h2>
+
+          <form action="#" method="post" class="newsletter-form">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button class="submit-btn fw-semi-bold">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <Footer />
+    </section>
+  </main>
 </Layout>

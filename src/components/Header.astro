@@ -1,0 +1,34 @@
+---
+// Component imports
+import Button from "../components/Button.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<header>
+  <div class="header-wrapper container">
+    <a href="/" aria-label="Home" class="logo-link"><Icon name="logo" size={100} /></a>
+
+    <nav class="nav-menu">
+      <ul role="list" class="nav-links">
+        <li class="nav-link">
+          <a href="/" class="active" aria-label="Home" data-page="home">Home</a>
+        </li>
+        <li class="nav-link">
+          <a href="/about" aria-label="About" data-page="about">About</a>
+        </li>
+        <li class="nav-link">
+          <a href="/contact" aria-label="Contact" data-page="contact">Contact</a
+          >
+        </li>
+        <li class="nav-link">
+          <a href="/services" aria-label="Services">Services</a>
+        </li>
+        <li class="nav-link">
+          <a href="/gallery" aria-label="Gallery">Gallery</a>
+        </li>
+      </ul>
+    </nav>
+
+    <Button href="/contact" class="btn-secondary btn-dark fw-semi-bold" text="Contact Us" icon="message" />
+  </div>
+</header>
