@@ -1,8 +1,11 @@
+@use '../variables' as *;
+
 header {
   .header-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     // .logo-link {
     //   width: 151px;
     // }
@@ -12,9 +15,18 @@ header {
       padding-inline: 10px;
       border-radius: 60px;
       background: linear-gradient(90deg, rgba(13, 94, 135, 0.13) 0.14%, rgba(253, 2, 2, 0.10) 121.7%);
+
       .nav-link {
         padding: 16px 18.5px;
       }
+    }
+
+    &.nav-light {
+      .nav-menu .nav-links {
+        color: $clr-neutral-100;
+        background: linear-gradient(90deg, rgba(63, 146, 187, 0.48) 0.14%, rgba(227, 80, 80, 0.34) 121.7%);
+      }
+
     }
   }
 }

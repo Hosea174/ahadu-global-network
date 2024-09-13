@@ -12,7 +12,7 @@ const { text, href, class: className, icon } = Astro.props;
 ---
 
 <a href={href} class="btn-link">
-  <button class:list={["btn", className]}>{text}</button>
+  <button class:list={["btn", "fw-semi-bold", className]}>{text}</button>
   <span class="icon-wrap">
     <Icon name={icon} width={22} height={22}/>
   </span>

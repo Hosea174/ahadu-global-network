@@ -1,0 +1,238 @@
+---
+// Components
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+// styles
+import "../styles/pages/_about.scss";
+
+// assets
+import glow from "../assets/glowing-eclipse.svg";
+import abtCtaImg from "../assets/abt-cta-img.png";
+import showcase1 from "../assets/abt-showcase-1.png";
+import showcase2 from "../assets/abt-showcase-2.png";
+import showcase3 from "../assets/abt-showcase-3.png";
+
+// icons
+import audioElement from "../icons/audio-element.svg";
+import mission from "../icons/mission.svg";
+import vision from "../icons/vision.svg";
+import coreValues from "../icons/core-values.svg";
+---
+
+<Layout
+  title="About - Ahadu Global Network"
+  description="Learn more about Ahadu Global Network"
+>
+  <main>
+    <div class="hero-bg">
+      <Header class="nav-light" />
+      <section class="abt-hero-section">
+        <div class="container wrapper">
+          <div class="abt-hero-content">
+            <h1 class="font-header-1">
+              Revolutionizing media production using the latest echoes of
+              technologies
+            </h1>
+            <div class="description-wrap">
+              <span class="sm-line"></span>
+              <p>
+                Pioneering new standards in media through advanced technologies
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="who-section">
+      <div class="container wrapper">
+        <div class="who-content-wrap">
+          <span class="label-highlight">Who We Are</span>
+          <h2 class="font-header-2 fw-semi-bold">
+            Ahadu Global Network is a dynamic media production company rooted in
+            the heart of Washington, D.C. We specialize in delivering a full
+            range of services, from concept development and live streaming to
+            post-production and digital distribution, for clients worldwide.
+          </h2>
+          <Button
+            text="Our Services"
+            href="/services"
+            class="btn-secondary btn-dark"
+            icon="btn-arrow-dark"
+          />
+        </div>
+        <div class="abt-cta">
+          <div class="abt-img-wrap"><img src={abtCtaImg.src} alt="" /></div>
+          <div class="cta-card">
+            <img src={audioElement.src} alt="" width="50" />
+            <p class="fw-semi-bold">
+              Become part of the story, not the static.
+            </p>
+            <Button
+              text="Let's Talk"
+              href="/contact"
+              class="btn-secondary btn-light"
+              icon="btn-arrow-light"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="abt-agn-section">
+      <div class="container wrapper">
+        <div class="abt-agn-content">
+          <div class="abt-agn-header">
+            <span class="label-highlight">About AGN</span>
+            <h2 class="font-header-2">
+              Your Partner for a Successful Media Campaign
+            </h2>
+          </div>
+          <p class="abt-description">
+            An all-in-one media production company that brings your vision to
+            life with creativity and precision. From concept to final cut, we
+            handle every step to deliver captivating content that resonates with
+            your audience and elevates your brand.
+          </p>
+        </div>
+        <div class="agn-profile">
+          <div class="mission-card">
+            <div>
+              <img src={mission.src} alt="" />
+              <h3 class="font-header-3">Our Mission</h3>
+              <p>
+                To empower creators and brands by delivering cutting-edge media
+                production services that blend creativity and technology,
+                crafting compelling content that resonates with audiences and
+                drives impactful results.
+              </p>
+            </div>
+          </div>
+          <div class="vision-card">
+            <div>
+              <img src={vision.src} alt="" />
+              <h3 class="font-header-3">Our Vision</h3>
+              <p>
+                To be a global leader in media production, revolutionizing the
+                industry by consistently pushing the boundaries of innovation
+                and storytelling, and inspiring transformative connections
+                through powerful content.
+              </p>
+            </div>
+          </div>
+          <div class="core-values">
+            <div>
+              <img src={coreValues.src} alt="" />
+              <h3 class="font-header-3">Our Core Values</h3>
+              <div class="value">
+                <div class="value-name fw-semi-bold">
+                  <p>Integrity</p>
+                  <Icon name="sm-arrow" />
+                </div>
+                <p class="value-description">
+                  We uphold transparency and honesty in all our interactions,
+                  ensuring trust and reliability in our relationships with
+                  clients and colleagues.
+                </p>
+              </div>
+              <div class="value">
+                <div class="value-name fw-semi-bold">
+                  <p>Excellence</p>
+                  <Icon name="sm-arrow" />
+                </div>
+                <p class="value-description">
+                  We are committed to the highest standards of quality in every
+                  aspect of our work, from production to final delivery.
+                </p>
+              </div>
+              <div class="value">
+                <div class="value-name fw-semi-bold">
+                  <p>Collaboration</p>
+                  <Icon name="sm-arrow" />
+                </div>
+                <p class="value-description">
+                  We believe in the power of teamwork, working closely with
+                  clients and partners to achieve shared goals and bring visions
+                  to life.
+                </p>
+              </div>
+              <div class="value">
+                <div class="value-name fw-semi-bold">
+                  <p>Adaptability</p>
+                  <Icon name="sm-arrow" />
+                </div>
+                <p class="value-description">
+                  We embrace change and are always ready to evolve with new
+                  trends and technologies to stay ahead in the ever-changing
+                  media landscape.
+                </p>
+              </div>
+              <div class="value">
+                <div class="value-name fw-semi-bold">
+                  <p>Passion</p>
+                  <Icon name="sm-arrow" />
+                </div>
+                <p class="value-description">
+                  We are driven by a genuine love for media production, fueling
+                  our dedication to creating impactful and memorable content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="showcase-section">
+      <div class="container wrapper">
+        <div class="showcase-boxes">
+          <div class="showcase-text">
+            <h2 class="fw-bold">
+              Based at the Ronald Reagan Building in Washington, D.C., we
+              deliver media solutions with a global perspective.
+            </h2>
+            <Button
+              text="Our Services"
+              href="/services"
+              class="btn-secondary btn-dark"
+              icon="btn-arrow-dark"
+            />
+          </div>
+          <div class="showcase-img wrap-1">
+            <img src={showcase1.src} alt="" />
+          </div>
+          <div class="showcase-img wrap-2">
+            <img src={showcase2.src} alt="" />
+          </div>
+          <div class="showcase-img wrap-3">
+            <img src={showcase3.src} alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="newsletter-section">
+      <div class="wrapper container">
+        <img src={glow.src} alt="" class="glow-effect" />
+        <div class="newsletter-content text-center">
+          <span class="label-highlight">Email Newsletter</span>
+          <h2 class="font-header-2">
+            Stay in the loop! Be the first to know about our latest projects,
+            insider tips, and exclusive updates.
+          </h2>
+          <form action="#" method="post" class="newsletter-form">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button class="submit-btn fw-semi-bold">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+<Footer />

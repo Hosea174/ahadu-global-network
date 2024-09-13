@@ -6,11 +6,9 @@ footer {
   .footer-wrapper {
     color: #EEEBEB;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
+    grid-template-columns: .8fr 1fr 1fr;
     align-items: center;
-    padding: 40px 0;
-    // gap: 2rem;
+    padding-block: 30px;
 
     .col-1 {
       max-width: 350px;
