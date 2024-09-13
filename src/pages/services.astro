@@ -1,0 +1,52 @@
+---
+// Components
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+// styles
+import "../styles/pages/_services.scss";
+
+// assets
+import glow from "../assets/glowing-eclipse.svg";
+import designElement from "../assets/design-element.svg";
+import audioElement from "../icons/audio-element.svg";
+import servicesHeroImg from "../assets/services-hero-img.png";
+---
+
+<Layout
+  title="Services - Ahadu Global Network"
+  description="Explore our services at Ahadu Global Network"
+>
+  <Header />
+
+  <main>
+    <section class="services-hero-section">
+      <div class="container wrapper">
+        <div class="hero-header">
+          <h1 class="font-header-1">World-Class Media Production Solutions</h1>
+          <img src={designElement.src} alt="" />
+        </div>
+        <div class="hero-content">
+          <img src={servicesHeroImg.src} alt="" />
+          <div class="hero-text">
+            <div class="services-description">
+              <img src={audioElement.src} alt="" />
+            </div>
+            <p>
+              Our media production services offer a comprehensive solution for
+              your content needs. From delivering high-quality content to a global
+              audience to providing state-of-the-art facilities for live
+              streaming, production, and post-production, we have everything you
+              need to bring your vision to life.
+            </p>
+            <a href="#">Scroll down</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- <Footer/> -->
+</Layout>
