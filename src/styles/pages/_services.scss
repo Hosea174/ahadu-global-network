@@ -22,25 +22,114 @@
       gap: 5rem;
       align-items: center;
       padding-block-start: 2rem;
+
       .hero-img {
         width: 100%;
       }
+
       .hero-text {
         max-width: 500px;
+
         img {
           width: 85px;
         }
+
         p {
           margin-block: 1.5rem;
         }
+
         a {
           font-size: $fs-sm;
           padding: 12px 14px;
           border-radius: 50px;
-          border: 1px solid rgba(3, 24, 34, 0.60);;
+          border: 1px solid rgba(3, 24, 34, 0.60);
+          ;
         }
       }
     }
+  }
+}
+
+.benefits-section {
+  margin-block: 5rem;
+  background-color: #143340;
+  border-radius: 60px;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    // grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding-block: 4rem;
+
+    p,
+    h2,
+    h3 {
+      color: $clr-neutral-100;
+    }
+
+    .col-1.benefits {
+      // grid-column: 1 / 2;
+      width: 55%;
+
+      .accordion-item {
+        border-bottom: 1px solid #fff;
+        padding-block: .75rem;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .accordion-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-block: 1rem;
+          cursor: pointer;
+
+          .icon {
+            padding: 7px 16px;
+            border-radius: 30px;
+            background: #DBEFF1;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+
+      .accordion-content {
+        display: none;
+      }
+
+      .accordion-item.active>.accordion-content {
+        display: block;
+      }
+    }
+
+    .col-2 {
+      width: 50%;
+
+      h2 {
+        font-size: 2.1rem;
+        font-family: $ff-body;
+        line-height: 46px;
+      }
+
+      .img-wrap {
+        margin-top: 1.5rem;
+        width: 100%;
+        height: 375px;
+        overflow: hidden;
+        border-radius: 20px;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
 
   }
 }
