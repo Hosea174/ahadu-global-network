@@ -1,0 +1,131 @@
+---
+// Components
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+// styles
+import "../styles/pages/_contact.scss";
+
+// assets
+import glow from "../assets/glowing-eclipse.svg";
+import designElement from "../assets/design-element.svg";
+---
+
+<Layout title="Contact - Ahadu Global Network" description="Get in Touch">
+  <Header />
+  <main>
+    <section class="contact-hero-section">
+      <div class="container wrapper">
+        <div class="contact-content text-center">
+          <h1 class="font-header-1">Get in touch with us</h1>
+          <p>
+            We are here to help you with any questions you may have. Reach out
+            to us and we will get back to you as soon as possible.
+          </p>
+        </div>
+        <img src={designElement.src} alt="" />
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <div class="container wrapper">
+        <img src={glow.src} class="glow" alt="" />
+        <div class="contact-info">
+          <span class="label-highlight">Contact Us</span>
+          <h2 class="font-header-2">Ready to Request a Quote?</h2>
+          <div class="contacts">
+            <div class="contact">
+              <p class="contact-type fw-bold">Email:</p>
+              <p class="contact-detail">info@ahaduglobal.com</p>
+            </div>
+            <div class="contact">
+              <p class="contact-type fw-bold">Phone:</p>
+              <p class="contact-detail">+1 202 599 7790</p>
+            </div>
+            <div class="contact">
+              <p class="contact-type fw-bold">Address:</p>
+              <p class="contact-detail">
+                1300 Pennsylvania Avenue NW, Washington, DC 20004, United States
+              </p>
+            </div>
+            <div class="contact">
+              <p class="contact-type fw-bold">Socials:</p>
+              <div class="contact-detail social-links">
+                <Icon name="facebook" width={28} height={28} />
+                <Icon name="twitter" width={28} height={28} />
+                <Icon name="youtube" width={28} height={28} />
+                <Icon name="instagram" width={28} height={28} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <div class="form-container">
+            <form>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First Name*"
+                  required
+                />
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last Name*"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email*"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Company"
+                />
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms"
+                  >I've read and agreed to the <a href="#" class="terms-link"
+                    >Terms and Conditions</a
+                  ></label
+                >
+              </div>
+              <button type="submit" class="submit-button">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="g-map">
+      <div class="container wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d524.5951571008408!2d-77.00933310127597!3d38.88991523213005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b9e7b04393ef%3A0x22a4353b9d4bebab!2s1300%20Pennsylvania%20Avenue%2C%20Washington%2C%20DC%2020004%2C%20USA!5e1!3m2!1sen!2set!4v1726415738153!5m2!1sen!2set"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

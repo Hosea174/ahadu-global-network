@@ -1,6 +1,12 @@
 @use '../variables' as *;
 
 header {
+  position: absolute;
+  top: .5rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
   .header-wrapper {
     display: flex;
     align-items: center;
