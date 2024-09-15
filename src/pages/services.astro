@@ -9,7 +9,7 @@ import { Icon } from "astro-icon/components";
 // styles
 import "../styles/pages/_services.scss";
 
-// assets
+// images
 import glow from "../assets/glowing-eclipse.svg";
 import designElement from "../assets/design-element.svg";
 import audioElement from "../icons/audio-element.svg";
@@ -20,6 +20,10 @@ import stage from "../assets/stage.png";
 import controlRoom from "../assets/control-room.png";
 import studio from "../assets/studio.png";
 import workspace from "../assets/workspace.png";
+import studio1 from "../assets/studio1-bento.png";
+import studio2 from "../assets/studio2-bento.png";
+import studio3 from "../assets/studio3-bento.png";
+import studio4 from "../assets/studio4-bento.png";
 
 // icons
 import plus from "../icons/plus.svg";
@@ -166,8 +170,84 @@ import minus from "../icons/minus.svg";
         </div>
       </div>
     </section>
+
+    <section class="studio-rental-section">
+      <div class="container wrapper">
+        <div class="rental-content">
+          <div class="rental-header">
+            <span class="label-highlight">Studio Rental</span>
+            <h2 class="font-header-2">
+              Rent the Perfect Studio for Your Next Project
+            </h2>
+          </div>
+          <p class="rental-description">
+            Rent a fully equipped, state-of-the-art studio at Ahadu Global
+            Network, where you'll find everything you need to bring your
+            production to life. With professional-grade equipment, flexible
+            stage setups, and expert support, our studios are designed to handle
+            any project, from commercials to films, with ease and precision.
+          </p>
+        </div>
+
+        <div class="rental-bento">
+          <div class="rental-cta">
+            <p class="cta-text">
+              We specialize in providing <span class="fw-bold"
+                >fully equipped studios</span
+              > that empower you to bring your creative vision to life with our turnkey
+              studio options.
+            </p>
+            <div class="cta-box">
+              <p class="fw-bold">Got a project in mind?</p>
+              <Button
+                text="info@ahaduglobal.com"
+                href="/contact"
+                class="btn-primary btn-dark"
+                icon="btn-arrow-dark"
+              />
+            </div>
+          </div>
+          <div class="rental-img-wrap">
+            <img src={studio1.src} alt="" />
+          </div>
+          <div class="rental-img-wrap">
+            <img src={studio2.src} alt="" />
+          </div>
+          <div class="rental-img-wrap">
+            <img src={studio3.src} alt="" />
+          </div>
+          <div class="rental-img-wrap">
+            <img src={studio4.src} alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="wrapper container">
+        <img src={glow.src} alt="" class="glow-effect" />
+        <div class="newsletter-content text-center">
+          <span class="label-highlight">Email Newsletter</span>
+          <h2 class="font-header-2">
+            Stay in the loop! Be the first to know about our latest projects,
+            insider tips, and exclusive updates.
+          </h2>
+          <form action="#" method="post" class="newsletter-form">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button class="submit-btn fw-semi-bold">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
-  <!-- <Footer/> -->
+
+  <Footer />
 </Layout>
 
 <script src="../scripts/pages/services.js"></script>
