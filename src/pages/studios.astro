@@ -1,0 +1,93 @@
+---
+// Components
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+// styles
+import "../styles/pages/_studios.scss";
+
+// assets
+import glow from "../assets/glowing-eclipse.svg";
+import Button from "../components/Button.astro";
+---
+
+<Layout
+  title="Studios - Ahadu Global Network"
+  description="Explore our studios"
+>
+  <Header />
+
+  <main>
+    <section class="studios-hero-section">
+      <div class="container wrapper">
+        <img src={glow.src} alt="" class="glow" />
+        <div class="studios-content">
+          <h1 class="font-header-1">Choose From Our Range of Studios</h1>
+        </div>
+      </div>
+    </section>
+    <section class="studio-section studio-1">
+      <div class="container wrapper">
+        <div class="abt-studio">
+          <h2 class="font-header-2">Studio 1</h2>
+          <p>
+            Unique and convenient solution for those looking to use one platform
+            for both their newscast and interview set.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="studio-section studio-2">
+      <div class="container wrapper">
+        <div class="abt-studio">
+          <h2 class="font-header-2">Studio 2</h2>
+          <p>
+            Welcome to Studio Two, the ultimate destination for a diverse range
+            of productions, from news programs to talk shows and game shows.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="studio-section studio-3">
+      <div class="container wrapper">
+        <div class="abt-studio">
+          <h2 class="font-header-2">Virtual Studio</h2>
+          <p>
+            Welcome to the Virtual Studio experience at AGN Studios, where the
+            boundaries of imagination and reality blur seamlessly.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="studio-section studio-4">
+      <div class="container wrapper">
+        <div class="abt-studio">
+          <h2 class="font-header-2">Green Screen</h2>
+          <p>
+            Welcome to the Virtual Studio experience at AGN Studios, where the
+            boundaries of imagination and reality blur seamlessly.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section">
+      <div class="container wrapper">
+        <div class="cta-content text-center">
+          <h2 class="font-header-2">
+            Would You Like to Enquire More About Our Studios? Get in Touch Now
+          </h2>
+
+          <Button
+            text="info@ahaduglobal.com"
+            href="/contact"
+            class="btn-primary btn-dark"
+            icon="btn-arrow-dark"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
