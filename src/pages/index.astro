@@ -17,6 +17,9 @@ import photo3 from "../assets/photo3.png";
 import photo4 from "../assets/photo4.png";
 import cameraEquipment from "../assets/camera-equipment.png";
 import carouselGallery from "../assets/carousel-gallery.png";
+import heroBackground from "../assets/home-hero-bg.png";
+import heroBackground2 from "../assets/home-hero-bg-2.png";
+
 // icons
 import audioElement from "../icons/audio-element.svg";
 import budgetIcon from "../icons/budget-icon.svg";
@@ -35,32 +38,47 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
     <section class="hero-section">
       <div class="container wrapper">
         <div class="hero-bg-wrap">
-          <div class="hero-text-box">
-            <h1 class="font-header-1">
-              Revolutionizing Media Production with AGN Studios
-            </h1>
-            <p>
-              We are a premier studio rental company based in the heart of
-              Washington D.C., dedicated to providing top-notch broadcast
-              solutions.
-            </p>
-            <Button
-              href="/contact"
-              text="Get in Touch"
-              class="btn-primary"
-              icon="message"
-            />
-          </div>
-
-          <div class="hero-bottom-wrap">
-            <div class="navigation">
-              <span class="prev nav-arrow">
-                <Icon name="arrow" width={22} />
-              </span>
-              <span class="next nav-arrow">
-                <Icon name="arrow" width={22} />
-              </span>
+          <div class="swiper hero-swiper">
+            <div class="swiper-wrapper slider-img-wrap">
+              <img
+                src={heroBackground.src}
+                alt=""
+                class="swiper-slide bg-img"
+              />
+              <img
+                src={heroBackground2.src}
+                alt=""
+                class="swiper-slide bg-img"
+              />
+              <img src={photo2.src} alt="" class="swiper-slide bg-img" />
+              
             </div>
+
+            <div class="hero-text-box">
+              <h1 class="font-header-1">
+                Revolutionizing Media Production with AGN Studios
+              </h1>
+              <p>
+                We are a premier studio rental company based in the heart of
+                Washington D.C., dedicated to providing top-notch broadcast
+                solutions.
+              </p>
+              <Button
+                href="/contact"
+                text="Get in Touch"
+                class="btn-primary"
+                icon="message"
+              />
+            </div>
+            <div class="navigation-wrap">
+              <div class="swiper-button-prev nav-arrow">
+                <Icon name="arrow" width={18} />
+              </div>
+              <div class="swiper-button-next nav-arrow">
+                <Icon name="arrow" width={18} />
+              </div>
+            </div>
+
             <div class="social-links">
               <Icon name="facebook" width={28} height={28} />
               <Icon name="twitter" width={28} height={28} />
@@ -295,3 +313,5 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
   </main>
   <Footer />
 </Layout>
+
+<script src="../scripts/pages/index.js"></script>
