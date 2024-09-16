@@ -2,7 +2,7 @@
 
 .hero-section {
   .wrapper {
-    padding-block-start: 7.5rem;
+    padding-block-start: 6.5rem;
 
     .hero-bg-wrap {
       border-radius: 30px;
@@ -11,6 +11,8 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+
+
 
       .swiper {
         width: 100%;
@@ -27,6 +29,12 @@
             height: 100%;
             object-fit: cover;
           }
+
+          @media screen and (max-width: 750px) {
+            .bg-img {
+              filter: brightness(0.6);
+            }
+          }
         }
 
         .hero-text-box {
@@ -36,21 +44,36 @@
           position: relative;
           top: 2rem;
           left: 2rem;
-          max-width: 949px;
+          max-width: 80%;
           font-weight: 400;
           z-index: 2;
-        }
 
-        p {
-          color: $clr-neutral-100;
-          opacity: .85;
-          max-width: 595px;
-          margin-block: $size-400 $size-450;
+          p {
+            color: $clr-neutral-100;
+            max-width: 595px;
+            margin-block: $size-400 $size-450;
+          }
+
+          @media screen and (max-width: 1000px) {
+            max-width: 90%;
+          }
+
+          @media screen and (max-width: 425px) {
+            top: 1.5rem;
+            left: .75rem;
+            padding-inline: 0.4rem;
+            max-width: 95%;
+            border-left: 0;
+
+            p {
+              margin-block: $size-250 $size-350;
+            }
+          }
         }
 
         .social-links {
           position: absolute;
-          bottom: 2rem;
+          bottom: 2.25rem;
           right: 2rem;
           display: flex;
           gap: .35rem;
@@ -71,6 +94,11 @@
         bottom: 2rem;
         left: 2rem;
 
+        @media screen and (max-width: 425px) {
+          left: .75rem;
+          bottom: 1.75rem;
+        }
+
         .nav-arrow {
           position: relative;
           border: 1px solid $clr-neutral-100;
@@ -86,6 +114,15 @@
         }
       }
     }
+
+    @media screen and (max-width: 425px) {
+      padding-block-start: 5.35rem;
+
+      .hero-bg-wrap {
+        min-height: 575px;
+        border-radius: 20px;
+      }
+    }
   }
 
   .hero-studios {
@@ -95,47 +132,74 @@
       display: flex;
       gap: 1.35rem;
       justify-content: space-between;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .studio {
+        scroll-snap-align: start;
+        height: 200px;
+        width: 25%;
+        position: relative;
+        border-radius: 15px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: grayscale(80%);
+        transition: filter 0.4s ease-in-out;
+        cursor: pointer;
+
+        &:nth-child(1) {
+          background-image: url('../../assets/studio-1.png');
+        }
+
+        &:nth-child(2) {
+          background-image: url('../../assets/studio-2.png');
+        }
+
+        &:nth-child(3) {
+          background-image: url('../../assets/virtual-studio.png');
+        }
+
+        &:nth-child(4) {
+          background-image: url('../../assets/green-screen.png');
+        }
+
+        &:hover {
+          filter: grayscale(0%);
+          // transform: scale(1.1); // Zoom in effect
+        }
+      }
+
+      .label-highlight {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        padding: 3px 15px;
+      }
     }
 
-    .studio {
-      height: 200px;
-      width: 25%;
-      position: relative;
-      border-radius: 15px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      filter: grayscale(80%);
-      transition: filter 0.4s ease-in-out;
-      cursor: pointer;
-
-      &:nth-child(1) {
-        background-image: url('../../assets/studio-1.png');
-      }
-
-      &:nth-child(2) {
-        background-image: url('../../assets/studio-2.png');
-      }
-
-      &:nth-child(3) {
-        background-image: url('../../assets/virtual-studio.png');
-      }
-
-      &:nth-child(4) {
-        background-image: url('../../assets/green-screen.png');
-      }
-
-      &:hover {
-        filter: grayscale(0%);
-        // transform: scale(1.1); // Zoom in effect
+    @media screen and (max-width: 850px) {
+      .studios-container .studio {
+        min-width: 35vw;
       }
     }
 
-    .label-highlight {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      padding: 3px 15px;
+    @media screen and (max-width: 500px) {
+      margin-block: 1rem;
+
+      .studios-container {
+        gap: 1rem;
+
+        .studio {
+          min-width: 65vw;
+        }
+      }
     }
   }
 

@@ -22,19 +22,22 @@ $fw-semi-bold: 500;
 $fw-bold: 600;
 
 // font sizes
-$fs-h1: 3.875rem;
-$fs-h2: 2.875rem;
-$fs-h3: 1.75rem;
-$fs-body: 1.125rem;
-$fs-sm: 1rem;
+$fs-h1: clamp(2.25rem, 1.7898230088495575rem + 2.3008849557522124vw, 3.875rem);
+$fs-h2: clamp(2rem, 1.752212389380531rem + 1.238938053097345vw, 2.875rem);
+$fs-h3: clamp(1.5rem, 1.4292035398230087rem + 0.35398230088495575vw, 1.75rem);
+$fs-body: clamp(1rem, 0.9646017699115044rem + 0.17699115044247787vw, 1.125rem);
+$fs-sm: clamp(0.875rem, 0.8396017699115044rem + 0.17699115044247787vw, 1rem);
 
 // sizing
 $size-100: 0.25rem;
 $size-200: 0.5rem;
+$size-250: 0.625rem;
 $size-300: 0.75rem;
+$size-350: 0.875rem;
 $size-400: 1rem;
 $size-450: 1.125rem;
 $size-500: 1.5rem;
 $size-600: 2rem;
 $size-700: 3rem;
 $size-800: 4rem;
+

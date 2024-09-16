@@ -12,9 +12,9 @@ const heroBackgrounds = new Swiper(".hero-swiper", {
   fadeEffect: {
     crossFade: false,
   },
-  autoplay: {
-    delay: 4000,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

@@ -39,4 +39,22 @@ footer {
       margin-bottom: .35rem;
     }
   }
+
+  // media query for 1 column grid layout on mobile
+  @media (max-width: 768px) {
+    .footer-wrapper {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+
+      .col-1 {
+        max-width: 100%;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+  }
 }

@@ -52,3 +52,39 @@ body {
   text-decoration: underline;
   margin-bottom: 1.2rem;
 }
+
+@media (max-width: 768px) {
+  .font-header-1 {
+    line-height: 48px;
+  }
+
+  // .font-header-2 {
+  //   line-height: 1.2;
+  // }
+
+  // .font-header-3 {
+  //   line-height: 1.2;
+  // }
+
+  // body {
+  //   line-height: 1.5;
+  // }
+}
+@media (max-width: 425px) {
+  .font-header-1 {
+    line-height: 42px;
+  }
+
+  // .font-header-2 {
+  //   line-height: 1.2;
+  // }
+
+  // .font-header-3 {
+  //   line-height: 1.2;
+  // }
+
+  body {
+    line-height: 23px;
+  }
+}
+

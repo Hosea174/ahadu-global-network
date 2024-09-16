@@ -3,6 +3,8 @@
 import Button from "../components/Button.astro";
 import { Icon } from "astro-icon/components";
 
+// assets
+import logo from "../icons/logo.svg";
 interface Props {
   class?: string;
 }
@@ -19,7 +21,7 @@ const buttonClass = isNavLight
 <header>
   <div class:list={["header-wrapper", "container", className]}>
     <a href="/" aria-label="Home" class="logo-link"
-      ><Icon name="logo" size={100} /></a
+      ><img src={logo.src} alt=""></a
     >
 
     <nav class="nav-menu">
