@@ -84,6 +84,10 @@
             background-image: linear-gradient(90deg, rgba(238, 250, 255, 0.82) 0%, rgba(255, 211, 211, 0.82) 100%);
             border-radius: 50%;
           }
+
+          @media screen and (max-width: 425px) {
+            right: 1rem;
+          }
         }
       }
 
@@ -309,6 +313,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      gap: 2rem;
 
       .services-header {
         h2 {
@@ -330,6 +335,36 @@
 
       }
     }
+
+    @media screen and (max-width: 1080px) {
+      gap: 2rem;
+
+      .row-1 {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 3rem;
+
+        .services-header h2 {
+          line-height: 42px;
+        }
+      }
+
+      .row-2 {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 2rem;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      padding-inline: 1rem;
+      gap: $size-350;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    background-image: url("../../assets/blue-bg-mobile.png");
+    background-size: cover;
   }
 }
 
@@ -342,9 +377,9 @@
     .glow-effect {
       position: absolute;
       top: -20%;
-      left: -40%;
+      left: 30%;
       width: 100vw;
-      height: 100vh;
+      height: 80vh;
       z-index: -1;
     }
 
@@ -357,6 +392,16 @@
         h2 {
           margin-block: $size-450 $size-600;
           max-width: 80vw;
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        .header-text h2 {
+          max-width: 100%;
         }
       }
     }
@@ -379,6 +424,15 @@
         img {
           width: 45px;
           height: 45px;
+        }
+      }
+
+      @media screen and (max-width:750px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+
+        .reason {
+          height: 250px;
         }
       }
     }
