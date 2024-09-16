@@ -8,7 +8,8 @@ interface Props {
 }
 
 const { class: className } = Astro.props;
-const isNavLight = typeof className === "string" && className.includes("nav-light");
+const isNavLight =
+  typeof className === "string" && className.includes("nav-light");
 
 const buttonClass = isNavLight
   ? "btn-secondary btn-light"
@@ -41,12 +42,54 @@ const buttonClass = isNavLight
         </li>
       </ul>
     </nav>
-
-    <Button
-      href="/contact"
-      class={buttonClass}
-      text="Contact Us"
-      icon={isNavLight ? "message-light": "message"}
-    />
+    <div class="nav-btns">
+      <Button
+        href="/contact"
+        class={buttonClass}
+        text="Contact Us"
+        icon={isNavLight ? "message-light" : "message"}
+      />
+      <button class="nav-toggler"><span></span></button>
+    </div>
   </div>
 </header>
+
+<script>
+  const navToggler = document.querySelector(".nav-toggler") as HTMLElement;
+  const navMenu = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".navbar a");
+  allEventListners();
+
+  function allEventListners() {
+    navToggler.addEventListener("click", togglerClick);
+    navLinks.forEach((elem) => elem.addEventListener("click", navLinkClick));
+  }
+
+  function togglerClick() {
+    navToggler.classList.toggle("toggler-open");
+    navMenu.classList.toggle("open");
+    document.body.classList.toggle(
+      "no-scroll",
+      navMenu.classList.contains("open")
+    );
+  }
+
+  function navLinkClick() {
+    if (navMenu.classList.contains("open")) {
+      navToggler.click();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const pages = window.location.pathname.split("/");
+    const links = document.querySelectorAll("nav li a");
+    const home = document.querySelector("a[data-page='home']");
+    links.forEach((link) => {
+      const linkPage = link.getAttribute("data-page");
+      if (pages.includes(linkPage)) {
+        link.classList.add("active");
+        home.classList.remove("active");
+      }
+    });
+  });
+</script>
