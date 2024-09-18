@@ -17,7 +17,7 @@
 
     h1 {
       font-size: clamp(2.15rem, 1.661504424778761rem + 2.442477876106195vw, 3.875rem);
-      line-height: 38px;
+      // line-height: 52px;
     }
 
     .description-wrap {
@@ -41,6 +41,9 @@
     border-radius: 0 0 30px 30px;
 
     .wrapper .abt-hero-content {
+      h1 {
+        line-height: 38px;
+      }
 
       .description-wrap {
         flex-direction: column;
@@ -370,6 +373,7 @@
   @media screen and (max-width: 750px) {
     background-image: url("../../assets/blue-bg-mobile.png");
     background-size: cover;
+
     .wrapper {
       padding-block: 6rem;
     }
