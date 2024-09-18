@@ -43,3 +43,69 @@
   background: linear-gradient(90deg, rgba(255, 211, 211, 0.82) 0%, rgba(238, 244, 247, 0.82) 100%);
   backdrop-filter: blur(2px);
 }
+
+// Custom scrollbar styles
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #ff6b6b, #f06595);
+  /* Gradient background for the scrollbar thumb */
+  border-radius: 10px;
+  /* Rounded corners for the thumb */
+  border: 3px solid #f1f1f1;
+  /* Adds space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #ff4757, #e056fd);
+  /* Darker gradient on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $clr-primary-500 #f1f1f1;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+// lenis css
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+

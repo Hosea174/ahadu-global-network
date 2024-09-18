@@ -62,10 +62,20 @@
     filter: brightness(1.15);
 
     .icon-wrap {
-      animation: bounceX 0.8s cubic-bezier(0.68, -0.2, 0.27, 1.55);
+      animation: bounceX 0.7s cubic-bezier(0.68, -0.2, 0.27, 1.55);
+    }
+  }
+
+  &>.btn-xl {
+    padding: 1.5rem;
+    font-size: 2rem;
+
+    &+.icon-wrap {
+      padding: 1.7rem;
     }
   }
 }
+
 
 @keyframes bounceX {
   0% {
@@ -73,7 +83,7 @@
   }
 
   50% {
-    transform: translateX(5px);
+    transform: translateX(4px);
   }
 
   100% {

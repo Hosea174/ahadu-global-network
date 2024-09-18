@@ -252,7 +252,7 @@
     .about-images {
       position: absolute;
       width: 90%;
-      top: 40%;
+      top: 29rem;
       left: 50%;
       transform: translateX(-50%);
       z-index: -1;
@@ -264,6 +264,9 @@
         flex-direction: column;
 
         img {
+          transform: translateY(10rem);
+          opacity: 0;
+          filter: blur(8px);
           width: 350px;
           max-width: 100%;
           height: auto;
@@ -328,6 +331,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      gap: 2rem;
 
       p.services-description {
         max-width: 600px;
@@ -336,7 +340,7 @@
       }
     }
 
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 1150px) {
       gap: 2rem;
 
       .row-1 {
@@ -359,6 +363,19 @@
     @media screen and (max-width: 700px) {
       padding-inline: 1rem;
       gap: $size-350;
+
+      .row-2 {
+        .btn-link {
+          .btn {
+            padding: 10px 14px;
+            font-size: $fs-body;
+          }
+          .icon-wrap {
+            padding: 13px;
+
+          }
+        }
+      }
     }
   }
 
