@@ -235,6 +235,7 @@
       display: flex;
       justify-content: space-between;
       align-items: end;
+      gap: 2rem;
 
       .rental-header {
         max-width: 500px;
@@ -261,12 +262,21 @@
       grid-template-columns: 1fr;
       grid-auto-rows: minmax(200px, auto);
 
+      .rental-cta {
+        padding: 1rem !important;
+      }
+
+      .rental-img-wrap {
+        height: 250px !important;
+      }
+
       // Tablet layout (6 columns)
       @media (min-width: 768px) {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: auto auto auto;
 
         .rental-cta {
+          min-width: 360px;
           grid-column: 1 / span 3;
           grid-row: 1 / span 2;
         }
@@ -324,11 +334,19 @@
       }
 
       .rental-img-wrap {
+        position: relative;
         width: 100%;
         height: 100%;
         min-height: 200px;
         overflow: hidden;
         border-radius: 10px;
+
+        .studio-name {
+          position: absolute;
+          bottom: 1rem;
+          left: 1rem;
+          line-height: normal;
+        }
 
         img {
           width: 100%;
@@ -344,13 +362,29 @@
         justify-content: space-between;
         padding: 24px 21px;
         border-radius: 10px;
+        gap: 3rem;
 
         .cta-box {
           p {
-            font-size: 56px;
-            line-height: 52px;
+            font-size: clamp(2rem, 1.575221238938053rem + 2.1238938053097343vw, 3.5rem);
+            line-height: normal;
             margin-block-end: 1rem;
           }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1035px) {
+    .wrapper {
+      .rental-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        .rental-header,
+        .rental-description {
+          max-width: 600px;
         }
       }
     }
@@ -382,21 +416,36 @@
         display: flex;
         gap: .5rem;
         justify-content: center;
+
+        input {
+          border-radius: 5px;
+          padding: 10px;
+          width: 350px;
+          border: 1px solid rgba(4, 34, 49, 0.77);
+          background: #FFF8F8;
+        }
+
+        button {
+          border-radius: 5px;
+          padding: 12px 15px;
+          border: none;
+          background: $clr-primary-400;
+        }
       }
 
-      input {
-        border-radius: 5px;
-        padding: 10px;
-        width: 350px;
-        border: 1px solid rgba(4, 34, 49, 0.77);
-        background: #FFF8F8;
-      }
+      @media screen and (max-width: 430px) {
+        h2 {
+          font-size: 1.55rem;
+          line-height: 28px;
+        }
 
-      button {
-        border-radius: 5px;
-        padding: 12px;
-        border: none;
-        background: $clr-primary-400;
+        form {
+          flex-direction: column;
+
+          input {
+            width: 100%;
+          }
+        }
       }
     }
   }
