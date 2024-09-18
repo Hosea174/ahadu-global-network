@@ -55,7 +55,7 @@ body {
 
 @media (max-width: 768px) {
   .font-header-1 {
-    line-height: 48px;
+    line-height: 48px !important;
   }
 
   .font-header-2 {
