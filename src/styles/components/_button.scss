@@ -6,11 +6,15 @@
   gap: 3px;
   align-items: center;
   line-height: 28px;
+  transition: filter .2s ease-in; // Add transition
 
   .btn {
-    cursor: pointer;
+    position: relative;
     padding: 10px 14px;
     border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
 
     &.btn-primary {
       background-color: $clr-primary-500;
@@ -52,5 +56,27 @@
 
   .btn-dark+.icon-wrap {
     border: 1px solid $clr-neutral-900;
+  }
+
+  &:hover {
+    filter: brightness(1.15);
+
+    .icon-wrap {
+      animation: bounceX 0.8s cubic-bezier(0.68, -0.2, 0.27, 1.55);
+    }
+  }
+}
+
+@keyframes bounceX {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
