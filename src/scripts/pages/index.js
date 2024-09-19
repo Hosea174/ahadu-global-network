@@ -80,7 +80,7 @@ splitTypes.forEach((splitType) => {
 
   gsap.from(split.words, {
     y: "50%",
-    duration: 1.5,
+    duration: 1.2,
     ease: "expo.out",
     opacity: 0,
     filter: "blur(3px)",
@@ -108,14 +108,14 @@ paragraphs.forEach((paragraph) => {
 
   gsap.from(split.words, {
     opacity: 0,
-    duration: 1,
+    duration: .4,
     filter: "blur(7px)",
     ease: "power2.out",
     stagger: 0.05,
     scrollTrigger: {
       trigger: paragraph,
       start: "top 100%",
-      end: "top 45%",
+      end: "top 70%",
       scrub: !isHeroSection, // Set scrub to false for hero section, true for others
       markers: false,
     },

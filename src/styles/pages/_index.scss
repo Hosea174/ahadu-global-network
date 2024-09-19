@@ -498,7 +498,8 @@
         border: 1px solid #3A3939;
         padding: 26px;
         background: linear-gradient(90deg, #F9ECEC 0%, rgba(234, 241, 248, 0.46) 100%);
-
+        transition: all 0.5s ease-out;
+        cursor: pointer;
         h3 {
           margin-block: $size-300 $size-200;
         }
@@ -506,6 +507,17 @@
         img {
           width: 45px;
           height: 45px;
+        }
+
+        &:hover {
+          background: linear-gradient(90deg, #364247 0%, #273033 100%);
+          background: #364247;
+          h3,p {
+            color: $clr-neutral-100;
+          }
+          p {
+            opacity: .85;
+          }
         }
       }
 
@@ -517,6 +529,13 @@
           height: 250px;
         }
       }
+
+      @media screen and (max-width:420px) {
+        .reason {
+          padding: 1.25rem 1.1rem;
+        }
+      }
+
     }
   }
 }
