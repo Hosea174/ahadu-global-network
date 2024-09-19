@@ -58,7 +58,6 @@ onMount(() => {
     ease: "sine.out", // Animation easing
     filter: "none",
     stagger: 0.125, // Stagger the animation of the images
-    scale: 1.05,
     scrollTrigger: {
       trigger: ".about-section", // Trigger the animation when the user scrolls to the .about-section
       start: "top 80%", // Start the animation when the top of the .about-section reaches 80% of the viewport
@@ -116,7 +115,7 @@ paragraphs.forEach((paragraph) => {
     scrollTrigger: {
       trigger: paragraph,
       start: "top 100%",
-      end: "top 60%",
+      end: "top 45%",
       scrub: !isHeroSection, // Set scrub to false for hero section, true for others
       markers: false,
     },
