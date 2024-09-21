@@ -3,7 +3,8 @@ import Swiper from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import { Navigation, EffectFade, Autoplay } from "swiper/modules";
+import "swiper/css/effect-cards";
+import { Navigation, EffectFade, EffectCards, Autoplay } from "swiper/modules";
 
 // Animation imports
 import { onMount } from "solid-js";
@@ -28,6 +29,17 @@ const heroBackgrounds = new Swiper(".hero-swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+console.log("here");
+const galleryCarousel = new Swiper(".gallery-carousel", {
+  modules: [EffectCards, Autoplay],
+  autoplay: {
+    delay: 3000,
+  },
+  effect: "cards",
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
 });
 
 gsap.registerPlugin(ScrollTrigger);

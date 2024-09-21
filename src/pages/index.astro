@@ -60,7 +60,6 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
   </div>
 
   <Header />
-
   <main>
     <section class="hero-section">
       <div class="container wrapper">
@@ -267,9 +266,15 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
         </div>
 
         <div class="gallery-wrap">
-          <div class="img-carousel">
-            <img src={carouselGallery.src} alt="" />
+          <div class="swiper gallery-carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide img-wrapper"><img src={photo1.src} alt="" /></div>
+              <div class="swiper-slide img-wrapper"><img src={photo2.src} alt="" /></div>
+              <div class="swiper-slide img-wrapper"><img src={photo3.src} alt="" /></div>
+              <div class="swiper-slide img-wrapper"><img src={photo4.src} alt="" /></div>
+            </div>
           </div>
+
           <div class="gallery-text">
             <p class="fw-semi-bold reveal-text">
               From cameras to lighting and everything in between, discover the
