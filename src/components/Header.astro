@@ -89,19 +89,6 @@ const buttonClass = isNavLight
     }
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const pages = window.location.pathname.split("/");
-    const links = document.querySelectorAll("nav li a");
-    const home = document.querySelector("a[data-page='home']");
-    links.forEach((link) => {
-      const linkPage = link.getAttribute("data-page");
-      if (pages.includes(linkPage)) {
-        link.classList.add("active");
-        home.classList.remove("active");
-      }
-    });
-  });
-
   let lastScrollPosition = 0;
 
   document.addEventListener("scroll", function () {
@@ -119,6 +106,7 @@ const buttonClass = isNavLight
     lastScrollPosition = currentScrollPosition;
   });
 
+  // active nav link
   document.addEventListener("DOMContentLoaded", function () {
     const pages = window.location.pathname.split("/");
     const links = document.querySelectorAll(".nav-link");

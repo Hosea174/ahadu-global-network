@@ -64,10 +64,6 @@ footer {
   @media screen and (max-width: 970px) {
     .footer-wrapper {
       grid-template-columns: 1fr 1fr;
-
-      .col-3 {
-        // grid-column: 2/2;
-      }
     }
   }
 

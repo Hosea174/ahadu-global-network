@@ -30,7 +30,7 @@ const heroBackgrounds = new Swiper(".hero-swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-console.log("here");
+// swiper js gallery carousel
 const galleryCarousel = new Swiper(".gallery-carousel", {
   modules: [EffectCards, Autoplay],
   autoplay: {
