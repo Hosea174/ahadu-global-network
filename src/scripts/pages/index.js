@@ -71,8 +71,9 @@ window.addEventListener("load", () => {
     ease: "linear",
     opacity: 0,
     onComplete: () => {
-      gsap.to(".progress-bar", {
+      gsap.to(".progress-bar, .logo-animation", {
         opacity: 0,
+        duration: 0.85,
       });
 
       gsap.to(".blinder.top", {
