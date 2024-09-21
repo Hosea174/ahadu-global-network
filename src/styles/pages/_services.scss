@@ -450,3 +450,19 @@
     }
   }
 }
+
+@media screen and (max-width: 426px) {
+  .benefits-section {
+    margin-block: 3rem;
+  }
+
+  .studio-rental-section {
+    margin-block-end: 1.75rem;
+  }
+
+  .newsletter-section {
+    .wrapper {
+      margin-block-end: 3rem;
+    }
+  }
+}

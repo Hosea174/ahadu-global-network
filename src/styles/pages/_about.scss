@@ -128,7 +128,7 @@
 }
 
 .abt-agn-section {
-  margin-top: 13rem;
+  margin-top: 11rem;
 
   .wrapper {
     .abt-agn-content {
@@ -436,6 +436,39 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .who-section {
+    margin-block: 3rem;
+
+    .wrapper .abt-cta {
+      margin-block: 2rem;
+    }
+  }
+
+  .abt-agn-section {
+    margin-block: 10rem 3rem;
+  }
+
+  .showcase-section {
+    margin-block: 3rem 1.5rem;
+
+    .wrapper {
+      padding-block: 8rem;
+    }
+  }
+
+  .cta-section {
+    padding-block: 3rem;
+    margin-block: 3rem;
+  }
+
+  .newsletter-section {
+    .wrapper {
+      margin-block-end: 3rem;
     }
   }
 }
