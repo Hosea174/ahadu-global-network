@@ -10,8 +10,6 @@ import { Navigation, EffectFade, EffectCards, Autoplay } from "swiper/modules";
 import { onMount } from "solid-js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
-import SplitType from "split-type";
 
 // swiper js hero carousel
 const heroBackgrounds = new Swiper(".hero-swiper", {
@@ -44,24 +42,6 @@ const galleryCarousel = new Swiper(".gallery-carousel", {
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Initialize Lenis
-const lenis = new Lenis({
-  duration: 1.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  smooth: true,
-  gestureDirection: "vertical",
-  smoothTouch: true,
-  touchMultiplier: 2,
-});
-
-function raf(time) {
-  lenis.raf(time);
-  ScrollTrigger.update();
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
 onMount(() => {
   gsap.to(".about-images img", {
     y: -230, // Move the images up to their original position
@@ -79,60 +59,6 @@ onMount(() => {
   });
 });
 
-// SplitType
-const splitTypes = document.querySelectorAll(".font-header-1, .font-header-2");
-
-splitTypes.forEach((splitType) => {
-  const isHeroSection = splitType.closest(".hero-section"); // Check if the element is within the hero section
-
-  const split = new SplitType(splitType, {
-    types: "words",
-    wordsClass: "word",
-  });
-
-  gsap.from(split.words, {
-    y: "50%",
-    duration: 1.2,
-    ease: "expo.out",
-    opacity: 0,
-    filter: "blur(3px)",
-    stagger: 0.1,
-    scrollTrigger: {
-      trigger: splitType,
-      start: "top 90%",
-      end: "top 20%",
-      scrub: !isHeroSection, // Set scrub to false for hero section, true for others
-      markers: false,
-    },
-  });
-});
-
-// Select paragraph tags
-const paragraphs = document.querySelectorAll("p.reveal-text");
-
-paragraphs.forEach((paragraph) => {
-  const isHeroSection = paragraph.closest(".hero-section");
-
-  const split = new SplitType(paragraph, {
-    types: "words",
-    wordsClass: "word",
-  });
-
-  gsap.from(split.words, {
-    opacity: 0,
-    duration: 0.4,
-    filter: "blur(7px)",
-    ease: "power2.out",
-    stagger: 0.05,
-    scrollTrigger: {
-      trigger: paragraph,
-      start: "top 100%",
-      end: "top 70%",
-      scrub: !isHeroSection,
-      markers: false,
-    },
-  });
-});
 
 // preloader animation
 const loader = document.querySelector(".loader");

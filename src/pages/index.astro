@@ -16,7 +16,6 @@ import photo2 from "../assets/photo2.png";
 import photo3 from "../assets/photo3.png";
 import photo4 from "../assets/photo4.png";
 import cameraEquipment from "../assets/camera-equipment.png";
-import carouselGallery from "../assets/carousel-gallery.png";
 import heroBackground from "../assets/home-hero-bg.png";
 import heroBackground2 from "../assets/home-hero-bg-2.png";
 
@@ -80,10 +79,10 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
             </div>
 
             <div class="hero-text-box">
-              <h1 class="font-header-1">
+              <h1 class="font-header-1 no-scrub">
                 Revolutionizing Media Production with AGN Studios
               </h1>
-              <p class="reveal-text">
+              <p class="reveal-text no-scrub">
                 We are a premier studio rental company based in the heart of
                 Washington D.C., dedicated to providing top-notch broadcast
                 solutions.
@@ -215,7 +214,7 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
           <div class="reason">
             <img src={locationIcon.src} alt="" />
             <h3 class="font-header-3">Convenient Location</h3>
-            <p class="reason-description reveal-text">
+            <p class="reason-description reveal-text no-scrub">
               Located in the heart of Washington DC, Ahadu Global Network is
               easily accessible. Our convenient location means you can focus on
               your project, not your commute.
@@ -225,7 +224,7 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
           <div class="reason">
             <img src={budgetIcon.src} alt="" />
             <h3 class="font-header-3">Budget-Friendly Solutions</h3>
-            <p class="reason-description reveal-text">
+            <p class="reason-description reveal-text no-scrub">
               Don't let budget constraints hold back your creative vision. Our
               affordable pricing plans make high-quality media production
               accessible to everyone.
@@ -235,7 +234,7 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
           <div class="reason">
             <img src={techIcon.src} alt="" />
             <h3 class="font-header-3">Advanced Technologies</h3>
-            <p class="reason-description reveal-text">
+            <p class="reason-description reveal-text no-scrub">
               Stay ahead of the curve with our cutting-edge equipment and
               software. We invest in the latest technology to ensure that your
               productions are always top-notch.
@@ -245,7 +244,7 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
           <div class="reason">
             <img src={reliabilityIcon.src} alt="" />
             <h3 class="font-header-3">Proven Reliability</h3>
-            <p class="reason-description reveal-text">
+            <p class="reason-description reveal-text no-scrub">
               When you choose Ahadu Global Network, you're choosing a partner
               you can trust. Our track record of delivering projects on time and
               within budget speaks for itself.
@@ -268,10 +267,18 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
         <div class="gallery-wrap">
           <div class="swiper gallery-carousel">
             <div class="swiper-wrapper">
-              <div class="swiper-slide img-wrapper"><img src={photo1.src} alt="" /></div>
-              <div class="swiper-slide img-wrapper"><img src={photo2.src} alt="" /></div>
-              <div class="swiper-slide img-wrapper"><img src={photo3.src} alt="" /></div>
-              <div class="swiper-slide img-wrapper"><img src={photo4.src} alt="" /></div>
+              <div class="swiper-slide img-wrapper">
+                <img src={photo1.src} alt="" />
+              </div>
+              <div class="swiper-slide img-wrapper">
+                <img src={photo2.src} alt="" />
+              </div>
+              <div class="swiper-slide img-wrapper">
+                <img src={photo3.src} alt="" />
+              </div>
+              <div class="swiper-slide img-wrapper">
+                <img src={photo4.src} alt="" />
+              </div>
             </div>
           </div>
 
