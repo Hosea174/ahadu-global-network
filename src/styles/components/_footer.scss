@@ -2,13 +2,15 @@
 
 footer {
   background-color: $clr-neutral-800;
+  position: relative;
 
   .footer-wrapper {
     color: #EEEBEB;
     display: grid;
     grid-template-columns: .8fr 1fr 1fr;
     align-items: center;
-    padding-block: 30px;
+    padding-block: 30px 2.5rem;
+    gap: 1rem;
 
     .col-1 {
       max-width: 350px;
@@ -16,7 +18,8 @@ footer {
       .social-links {
         display: flex;
         gap: .4rem;
-        margin-block: 1rem;        
+        margin-block: 1rem;
+
         svg {
           background-image: linear-gradient(90deg, rgba(238, 250, 255, 0.82) 0%, rgba(255, 211, 211, 0.82) 100%);
           border-radius: 50%;
@@ -24,9 +27,15 @@ footer {
       }
 
       hr {
-        background-color: #ffffffaa;
+        background-color: #ffffff72;
         margin-block: 1rem;
+        border: none;
+        height: 1px;
       }
+    }
+
+    .col-2 {
+      white-space: nowrap;
     }
 
     .footer-links {
@@ -40,8 +49,29 @@ footer {
     }
   }
 
-  // media query for 1 column grid layout on mobile
-  @media (max-width: 768px) {
+  .copy {
+    margin-inline: auto;
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $clr-neutral-100;
+    font-size: 14px;
+    opacity: .75;
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: 970px) {
+    .footer-wrapper {
+      grid-template-columns: 1fr 1fr;
+
+      .col-3 {
+        // grid-column: 2/2;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
     .footer-wrapper {
       grid-template-columns: 1fr;
       gap: 1rem;
@@ -53,7 +83,7 @@ footer {
       .footer-links {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        gap: 0;
       }
     }
   }
