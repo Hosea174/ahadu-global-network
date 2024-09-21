@@ -1,5 +1,82 @@
 @use '../variables' as *;
 
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .logo-animation {
+    z-index: 1000;
+
+    svg path {
+      animation: rotate 5s linear infinite;
+      background: linear-gradient(to right, #FFB52A, #FF6E1F, #E65A0F);
+    }
+
+    @keyframes rotate {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+  }
+
+
+  .blinder-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .blinder {
+      width: 100vw;
+      background-color: #0e171d;
+    }
+
+    .blinder.top {
+      height: 50vh;
+      transform-origin: bottom;
+    }
+
+    .blinder.bottom {
+      height: 50vh;
+      transform-origin: top;
+    }
+  }
+
+  .progress-bar {
+    width: 35%;
+    height: 1px;
+    background-color: #9b6b1297;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    z-index: 1000;
+
+    .progress {
+      transform-origin: center;
+      width: 0;
+      height: 100%;
+      // background: linear-gradient(90deg, #189ee1 0%, #1e90ff 100%);
+      // background: #189ee1;
+      background: linear-gradient(to right, #FFB52A, #FF6E1F, #E65A0F);
+      border-radius: 8px;
+    }
+  }
+}
+
 .hero-section {
   .wrapper {
     padding-block-start: 6.5rem;
@@ -113,6 +190,7 @@
           &.swiper-button-prev {
             transform: rotate(180deg);
           }
+
           &:hover {
             background: #ffffff24;
           }
@@ -209,7 +287,6 @@
   }
 
 }
-
 
 .about-section {
   margin-block: 5rem 10rem;
@@ -501,6 +578,7 @@
         background: linear-gradient(90deg, #F9ECEC 0%, rgba(234, 241, 248, 0.46) 100%);
         transition: all 0.4s ease-out;
         cursor: pointer;
+
         h3 {
           margin-block: $size-300 $size-200;
         }
@@ -513,9 +591,12 @@
         &:hover {
           background: linear-gradient(90deg, #364247 0%, #273033 100%);
           background: #364247;
-          h3,p {
+
+          h3,
+          p {
             color: $clr-neutral-100;
           }
+
           p {
             opacity: .85;
           }
@@ -689,12 +770,15 @@
   .about-section {
     margin-block: 3rem;
   }
+
   .why-section {
     margin-block: 3rem;
   }
+
   .gallery-section {
     padding-block: 0;
   }
+
   .cta-section {
     padding-block: 3rem;
     margin-block: 3rem;

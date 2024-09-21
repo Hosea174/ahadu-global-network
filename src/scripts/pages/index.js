@@ -7,7 +7,7 @@ import { Navigation, EffectFade, Autoplay } from "swiper/modules";
 
 // Animation imports
 import { onMount } from "solid-js";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
@@ -99,7 +99,7 @@ splitTypes.forEach((splitType) => {
 const paragraphs = document.querySelectorAll("p.reveal-text");
 
 paragraphs.forEach((paragraph) => {
-  const isHeroSection = paragraph.closest(".hero-section"); // Check if the element is within the hero section
+  const isHeroSection = paragraph.closest(".hero-section");
 
   const split = new SplitType(paragraph, {
     types: "words",
@@ -108,7 +108,7 @@ paragraphs.forEach((paragraph) => {
 
   gsap.from(split.words, {
     opacity: 0,
-    duration: .4,
+    duration: 0.4,
     filter: "blur(7px)",
     ease: "power2.out",
     stagger: 0.05,
@@ -116,8 +116,49 @@ paragraphs.forEach((paragraph) => {
       trigger: paragraph,
       start: "top 100%",
       end: "top 70%",
-      scrub: !isHeroSection, // Set scrub to false for hero section, true for others
+      scrub: !isHeroSection,
       markers: false,
+    },
+  });
+});
+
+// preloader animation
+const loader = document.querySelector(".loader");
+
+window.addEventListener("load", () => {
+  // Animate the progress bar first
+  gsap.to(".progress", {
+    width: "100%",
+    duration: 0.85,
+    ease: "linear",
+    opacity: 0,
+    onComplete: () => {
+      gsap.to(".progress-bar", {
+        opacity: 0,
+      });
+
+      gsap.to(".blinder.top", {
+        height: 0,
+        ease: "sine.inOut",
+        duration: 0.85,
+        delay: 0.25,
+      });
+
+      gsap.to(".blinder.bottom", {
+        height: 0,
+        ease: "sine.inOut",
+        duration: 0.85,
+        delay: 0.25,
+        onComplete: () => {
+          // Hide the loader after the blinder animations finish
+          gsap.to(".loader", {
+            opacity: 0,
+            onComplete: () => {
+              loader.style.display = "none";
+            },
+          });
+        },
+      });
     },
   });
 });
