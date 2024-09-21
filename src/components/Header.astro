@@ -21,13 +21,13 @@ const buttonClass = isNavLight
 <header>
   <div class:list={["header-wrapper", "container", className]}>
     <a href="/" aria-label="Home" class="logo-link"
-      ><img src={logo.src} alt=""></a
+      ><img src={logo.src} alt="" /></a
     >
 
     <nav class="nav-menu">
       <ul role="list" class="nav-links">
-        <li class="nav-link">
-          <a href="/" class="active" aria-label="Home" data-page="home">Home</a>
+        <li class="nav-link active">
+          <a href="/" aria-label="Home" data-page="home">Home</a>
         </li>
         <li class="nav-link">
           <a href="/about" aria-label="About" data-page="about">About</a>
@@ -37,10 +37,17 @@ const buttonClass = isNavLight
           >
         </li>
         <li class="nav-link">
-          <a href="/services" aria-label="Services">Services</a>
+          <a href="/services" aria-label="Services" data-page="services"
+            >Services</a
+          >
         </li>
         <li class="nav-link">
-          <a href="/gallery" aria-label="Gallery">Gallery</a>
+          <a href="/studios" aria-label="Studios" data-page="studios">Studios</a
+          >
+        </li>
+        <li class="nav-link">
+          <a href="/gallery" aria-label="Gallery" data-page="gallery">Gallery</a
+          >
         </li>
       </ul>
     </nav>
@@ -88,6 +95,37 @@ const buttonClass = isNavLight
     const home = document.querySelector("a[data-page='home']");
     links.forEach((link) => {
       const linkPage = link.getAttribute("data-page");
+      if (pages.includes(linkPage)) {
+        link.classList.add("active");
+        home.classList.remove("active");
+      }
+    });
+  });
+
+  let lastScrollPosition = 0;
+
+  document.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    const currentScrollPosition = window.scrollY;
+
+    if (currentScrollPosition > lastScrollPosition || window.scrollY == 0) {
+      // Scrolling down
+      header.classList.remove("header-scroll");
+    } else {
+      // Scrolling up
+      header.classList.add("header-scroll");
+    }
+
+    lastScrollPosition = currentScrollPosition;
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const pages = window.location.pathname.split("/");
+    const links = document.querySelectorAll(".nav-link");
+    const home = document.querySelector("a[data-page='home']").closest(".nav-link");
+
+    links.forEach((link) => {
+      const linkPage = link.querySelector("a").getAttribute("data-page");
       if (pages.includes(linkPage)) {
         link.classList.add("active");
         home.classList.remove("active");
