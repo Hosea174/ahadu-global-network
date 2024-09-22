@@ -20,9 +20,6 @@ const heroBackgrounds = new Swiper(".hero-swiper", {
   fadeEffect: {
     crossFade: false,
   },
-  // autoplay: {
-  //   delay: 4000,
-  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -42,6 +39,7 @@ const galleryCarousel = new Swiper(".gallery-carousel", {
 
 gsap.registerPlugin(ScrollTrigger);
 
+// About section images animation
 onMount(() => {
   gsap.to(".about-images img", {
     y: -230, // Move the images up to their original position
@@ -59,45 +57,66 @@ onMount(() => {
   });
 });
 
-
-// preloader animation
-const loader = document.querySelector(".loader");
-
+// Preloader and Hero section animations
 window.addEventListener("load", () => {
-  // Animate the progress bar first
-  gsap.to(".progress", {
-    width: "100%",
-    duration: 0.85,
-    ease: "linear",
-    opacity: 0,
-    onComplete: () => {
-      gsap.to(".progress-bar, .logo-animation", {
-        opacity: 0,
-        duration: 0.85,
-      });
+  const loader = document.querySelector(".loader");
+  const body = document.body;
+  body.classList.add("no-scroll");
 
-      gsap.to(".blinder.top", {
-        height: 0,
-        ease: "sine.inOut",
-        duration: 0.85,
-        delay: 0.25,
-      });
+  const tl = gsap.timeline();
 
-      gsap.to(".blinder.bottom", {
-        height: 0,
-        ease: "sine.inOut",
-        duration: 0.85,
-        delay: 0.25,
-        onComplete: () => {
-          // Hide the loader after the blinder animations finish
-          gsap.to(".loader", {
-            opacity: 0,
-            onComplete: () => {
-              loader.style.display = "none";
-            },
-          });
-        },
-      });
-    },
-  });
+  // Pre-loader animation
+  tl.to(".progress", { width: "100%", duration: 0.85, ease: "linear" })
+    .to(
+      ".progress-bar, .logo-animation",
+      { opacity: 0, duration: 0.85 },
+      "-=0.5"
+    )
+    .call(() => {
+      body.classList.remove("no-scroll");
+    })
+    .to(
+      ".blinder.top",
+      { y: "-100%", ease: "power4.out", duration: 0.85, delay: .3},
+      "-=0.5"
+    )
+    .to(
+      ".blinder.bottom",
+      { y: "100%", ease: "power4.out", duration: 0.85 },
+      "-=0.85"
+    )
+    .to(".loader", {
+      opacity: 0,
+      duration: 0.5,
+      onComplete: () => loader.remove(),
+    });
+
+  // Hero section animation
+  const heroTl = gsap.timeline();
+  heroTl
+    .to(".hero-swiper .bg-img", {
+      clipPath: "inset(0% 0% 0% 0% round 30px)",
+      duration: 2,
+      ease: "power2.out",
+    })
+    .from(
+      ".hero-text-box h1",
+      { opacity: 0, y: 40, duration: 0.75, ease: "power2.out" },
+      "-=0.5"
+    )
+    .from(
+      ".hero-text-box p",
+      { opacity: 0, y: 40, duration: 0.65, ease: "power2.out" },
+      "-=0.5"
+    )
+    .from(
+      ".hero-section .btn-link",
+      { opacity: 0, y: 40, duration: 0.65, ease: "power2.out" },
+      "-=0.5"
+    )
+    .from(
+      ".social-links, .navigation-wrap",
+      { opacity: 0, y: 40, duration: 0.75, ease: "power2.out", stagger: 0.1 },
+      "-=0.5"
+    );
 });

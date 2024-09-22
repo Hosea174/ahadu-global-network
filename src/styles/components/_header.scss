@@ -15,7 +15,7 @@ header {
   &.header-scroll {
     top: 0;
     position: fixed;
-    z-index: 1000;
+    z-index: 50;
     padding-block-start: .5rem;
     transition: all 0.5s ease;
   }
@@ -188,6 +188,3 @@ header {
   }
 }
 
-.no-scroll {
-  overflow-y: hidden;
-}
