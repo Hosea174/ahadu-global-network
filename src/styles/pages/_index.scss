@@ -118,7 +118,7 @@
           border-image: linear-gradient(180deg, rgba(24, 158, 225, 0.20) 0%, #189EE1 50%, rgba(24, 158, 225, 0.20) 100%) 1;
           padding-inline: 1.25rem;
           position: relative;
-          top: 2rem;
+          top: 2.5rem;
           left: 2rem;
           max-width: 80%;
           font-weight: 400;
@@ -127,7 +127,7 @@
           p {
             color: $clr-neutral-100;
             max-width: 595px;
-            margin-block: $size-400 $size-450;
+            margin-block: $size-400 $size-500;
           }
 
           @media screen and (max-width: 1000px) {
@@ -155,10 +155,17 @@
           gap: .35rem;
           align-items: flex-end;
           z-index: 2;
-
-          svg {
-            background-image: linear-gradient(90deg, rgba(238, 250, 255, 0.82) 0%, rgba(255, 211, 211, 0.82) 100%);
-            border-radius: 50%;
+          .social {
+            width: 28px;
+            height: 28px;
+            transition: transform 0.4s ease-in-out;
+            svg {
+              background-image: linear-gradient(90deg, rgba(238, 250, 255, 0.82) 0%, rgba(255, 211, 211, 0.82) 100%);
+              border-radius: 50%;
+            }
+            &:hover {
+              transform: translateY(-5px);
+            }
           }
 
           @media screen and (max-width: 426px) {
@@ -232,12 +239,12 @@
         width: 25%;
         position: relative;
         border-radius: 15px;
-        background-size: cover;
+        background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
         filter: grayscale(80%);
-        transition: filter 0.4s ease-in-out;
         cursor: pointer;
+        transition: background-size 5.4s cubic-bezier(0.25, 0.74, 0.22, 0.99), filter 0.4s ease-in-out;
 
         &:nth-child(1) {
           background-image: url('../../assets/studio-1.png');
@@ -258,6 +265,7 @@
         &:hover {
           filter: grayscale(0%);
           // transform: scale(1.1); // Zoom in effect
+          background-size: 110% 110%;
         }
       }
 
@@ -351,27 +359,18 @@
           height: auto;
           border-radius: 10px;
           transform: rotate(0deg);
+
+          &.photo2 {
+            margin-top: -5rem;
+            margin-left: 5rem;
+          }
+
+          &.photo4 {
+            margin-top: -5rem;
+            margin-left: -5rem;
+          }
         }
 
-        .photo1 {
-          // transform: rotate(-9.707deg);
-        }
-
-        .photo2 {
-          margin-top: -5rem;
-          margin-left: 5rem;
-          // transform: rotate(9.707deg);
-        }
-
-        .photo3 {
-          // transform: rotate(9.707deg);
-        }
-
-        .photo4 {
-          margin-top: -5rem;
-          margin-left: -5rem;
-          // transform: rotate(-9.707deg);
-        }
       }
 
       @media screen and (max-width:1350px) {
@@ -447,14 +446,14 @@
   background-position: center;
   background-size: 100% 100%;
   width: 100%;
-  min-height: 765px;
+  min-height: 755px;
 
   .wrapper {
     padding: 120px 48px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 5rem;
+    gap: 7rem;
 
     .row-1 {
       display: flex;

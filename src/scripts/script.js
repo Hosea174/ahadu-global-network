@@ -4,7 +4,6 @@ import { onMount } from "solid-js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-console.log("script loaded");
 // Initialize Lenis
 const lenis = new Lenis({
   duration: 1.2,

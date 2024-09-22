@@ -20,6 +20,7 @@ header {
     transition: all 0.5s ease;
   }
 
+
   .header-wrapper {
     display: flex;
     align-items: center;
@@ -33,12 +34,18 @@ header {
       gap: 10px;
       padding-inline: 10px;
       border-radius: 60px;
-      // background: linear-gradient(90deg, rgba(13, 94, 135, 0.13) 0.14%, rgba(253, 2, 2, 0.10) 121.7%);
       background: linear-gradient(90deg, #DCE3EB 0.11%, #EDDBE0 99.89%);
 
       .nav-link {
         padding: 16px 15px;
         position: relative;
+
+        a {
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: #084559;
+          }
+        }
 
         &.active {
           font-weight: $fw-bold;
@@ -56,13 +63,14 @@ header {
           }
         }
       }
+
     }
 
     &.nav-light {
       .nav-menu .nav-links {
         color: $clr-neutral-100;
         background: linear-gradient(90deg, rgba(63, 146, 187, 0.48) 0.14%, rgba(227, 80, 80, 0.34) 121.7%);
-      
+
         .nav-link.active::before {
           background-color: $clr-neutral-100;
         }
@@ -187,4 +195,3 @@ header {
     }
   }
 }
-

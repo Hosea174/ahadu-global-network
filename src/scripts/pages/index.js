@@ -29,7 +29,7 @@ const heroBackgrounds = new Swiper(".hero-swiper", {
 const galleryCarousel = new Swiper(".gallery-carousel", {
   modules: [EffectCards, Autoplay],
   autoplay: {
-    delay: 3000,
+    delay: 2000,
   },
   effect: "cards",
   grabCursor: true,
@@ -117,7 +117,7 @@ window.addEventListener("load", () => {
     })
     .to(
       ".blinder.top",
-      { y: "-100%", ease: "power4.out", duration: 0.85, delay: .3},
+      { y: "-100%", ease: "power4.out", duration: 0.85, delay: 0.3 },
       "-=0.5"
     )
     .to(
@@ -140,6 +140,28 @@ window.addEventListener("load", () => {
       ease: "power2.out",
     })
     .from(
+      "header",
+      {
+        opacity: 0,
+        filter: "blur(2px)",
+        y: -20,
+        duration: 0.25,
+        ease: "power2.out",
+      },
+      "-=0.5"
+    )
+    .to(
+      "header",
+      {
+        opacity: 1,
+        filter: "blur(0px)",
+        y: 0,
+        duration: 0.25,
+        ease: "power2.out",
+      },
+      "-=0.5"
+    )
+    .from(
       ".hero-text-box h1",
       { opacity: 0, y: 40, duration: 0.75, ease: "power2.out" },
       "-=0.5"
@@ -155,8 +177,15 @@ window.addEventListener("load", () => {
       "-=0.5"
     )
     .from(
-      ".social-links, .navigation-wrap",
-      { opacity: 0, y: 40, duration: 0.75, ease: "power2.out", stagger: 0.1 },
+      ".hero-section .social-links, .hero-section .navigation-wrap",
+      {
+        opacity: 0,
+        y: 20,
+        filter: "blur(2px)",
+        duration: 0.75,
+        ease: "power2.out",
+        stagger: 0.1,
+      },
       "-=0.5"
     );
 });

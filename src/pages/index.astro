@@ -104,10 +104,18 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
             </div>
 
             <div class="social-links">
-              <Icon name="facebook" width={28} height={28} />
-              <Icon name="twitter" width={28} height={28} />
-              <Icon name="youtube" width={28} height={28} />
-              <Icon name="instagram" width={28} height={28} />
+              <a href="/" class="social">
+                <Icon name="facebook" width={28} height={28} />
+              </a>
+              <a href="/" class="social">
+                <Icon name="twitter" width={28} height={28} />
+              </a>
+              <a href="/" class="social">
+                <Icon name="youtube" width={28} height={28} />
+              </a>
+              <a href="/" class="social">
+                <Icon name="instagram" width={28} height={28} />
+              </a>
             </div>
           </div>
         </div>
@@ -351,20 +359,3 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
 </Layout>
 
 <script src="../scripts/pages/index.js"></script>
-
-<!-- 
-write a gsap timeline animation in this specific order:
-1. Website pre-loader animation
-  - add an event listner on window for "load" event
-  - create a gsap timeline
-  - animate the progress bar by setting its width to 100% 
-  - animate the logo and the progress bar to fade out
-  - animate the blinder elements to move off the screen (one going up, and the other going down)
-  - animate the loader to fade out and remove it from the DOM
-2. Hero section animation
-  - create a gsap timeline
-  - animate the hero slider image using clip-path to reveal the image
-  - animate the hero section texts to fade in using split text
-  - animate the hero button to fade in 
-  - animate the social links and the navigation buttons to fade in from the bottom (.social-links and .navigation-wrap)
-  -->
