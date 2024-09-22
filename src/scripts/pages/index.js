@@ -189,3 +189,15 @@ window.addEventListener("load", () => {
       "-=0.5"
     );
 });
+
+gsap.from(".services-section img", {
+  clipPath: "inset(0 50% 0 0 round 149px)",
+  duration: 0.75,
+  ease: "power2.out",
+
+  scrollTrigger: {
+    trigger: ".services-section",
+    start: "top 70%",
+    end: "bottom 100%",
+  },
+});
