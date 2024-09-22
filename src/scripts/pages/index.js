@@ -112,9 +112,6 @@ window.addEventListener("load", () => {
       { opacity: 0, duration: 0.85 },
       "-=0.5"
     )
-    .call(() => {
-      body.classList.remove("no-scroll");
-    })
     .to(
       ".blinder.top",
       { y: "-100%", ease: "power4.out", duration: 0.85, delay: 0.3 },
