@@ -350,26 +350,27 @@
           max-width: 100%;
           height: auto;
           border-radius: 10px;
+          transform: rotate(0deg);
         }
 
         .photo1 {
-          transform: rotate(-9.707deg);
+          // transform: rotate(-9.707deg);
         }
 
         .photo2 {
           margin-top: -5rem;
           margin-left: 5rem;
-          transform: rotate(9.707deg);
+          // transform: rotate(9.707deg);
         }
 
         .photo3 {
-          transform: rotate(9.707deg);
+          // transform: rotate(9.707deg);
         }
 
         .photo4 {
           margin-top: -5rem;
           margin-left: -5rem;
-          transform: rotate(-9.707deg);
+          // transform: rotate(-9.707deg);
         }
       }
 

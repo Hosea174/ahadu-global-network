@@ -41,18 +41,60 @@ gsap.registerPlugin(ScrollTrigger);
 
 // About section images animation
 onMount(() => {
-  gsap.to(".about-images img", {
-    y: -230, // Move the images up to their original position
-    opacity: 1, // Show the images
-    duration: 1, // Animation duration
-    ease: "sine.out", // Animation easing
+  const commonAnimation = {
+    y: -230,
+    opacity: 1,
+    duration: 1,
+    ease: "sine.out",
     filter: "none",
-    stagger: 0.125, // Stagger the animation of the images
+    stagger: 0.125,
     scrollTrigger: {
-      trigger: ".about-section", // Trigger the animation when the user scrolls to the .about-section
-      start: "top 80%", // Start the animation when the top of the .about-section reaches 80% of the viewport
-      end: "bottom 60%", // End the animation when the bottom of the .about-section reaches 20% of the viewport
-      scrub: true, // Smoothly animate the images as the user scrolls
+      trigger: ".about-section",
+      start: "top 80%",
+      end: "bottom 60%",
+      scrub: true,
+    },
+  };
+
+  gsap.to(".about-images img", commonAnimation);
+
+  gsap.to(".photo1", {
+    rotate: -9.707,
+    scrollTrigger: {
+      trigger: ".about-section",
+      start: "top 80%",
+      end: "bottom 60%",
+      scrub: true,
+    },
+  });
+
+  gsap.to(".photo2", {
+    rotate: 9.707,
+    scrollTrigger: {
+      trigger: ".about-section",
+      start: "top 80%",
+      end: "bottom 60%",
+      scrub: true,
+    },
+  });
+
+  gsap.to(".photo3", {
+    rotate: 9.707,
+    scrollTrigger: {
+      trigger: ".about-section",
+      start: "top 80%",
+      end: "bottom 70%",
+      scrub: true,
+    },
+  });
+
+  gsap.to(".photo4", {
+    rotate: -9.707,
+    scrollTrigger: {
+      trigger: ".about-section",
+      start: "top 80%",
+      end: "bottom 60%",
+      scrub: true,
     },
   });
 });
@@ -60,8 +102,6 @@ onMount(() => {
 // Preloader and Hero section animations
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
-  const body = document.body;
-  body.classList.add("no-scroll");
 
   const tl = gsap.timeline();
 
