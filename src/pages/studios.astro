@@ -3,13 +3,17 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 import { Icon } from "astro-icon/components";
 // styles
 import "../styles/pages/_studios.scss";
 
 // assets
 import glow from "../assets/glowing-eclipse.svg";
-import Button from "../components/Button.astro";
+import studio1 from "../assets/studio-a.png";
+import studio2 from "../assets/studio-b.png";
+import studio3 from "../assets/studio-c.png";
+import studio4 from "../assets/studio-d.png";
 ---
 
 <Layout
@@ -23,54 +27,79 @@ import Button from "../components/Button.astro";
       <div class="container wrapper">
         <img src={glow.src} alt="" class="glow" />
         <div class="studios-content">
-          <h1 class="font-header-1 no-scrub">Choose From Our Range of Studios</h1>
+          <h1 class="font-header-1 no-scrub">
+            Choose From Our Range of Studios
+          </h1>
         </div>
       </div>
     </section>
-    <section class="studio-section studio-1">
+    <section class="studio-section">
       <div class="container wrapper">
-        <div class="abt-studio">
-          <h2 class="font-header-2">Studio 1</h2>
-          <p class="reveal-text no-scrub"> 
-            Unique and convenient solution for those looking to use one platform
-            for both their newscast and interview set.
-          </p>
+        <div class="abt-studio studio-1">
+          <div class="studio-text">
+            <h2 class="font-header-2 no-scrub">Studio 1</h2>
+            <p class="reveal-text no-scrub">
+              Unique and convenient solution for those looking to use one
+              platform for both their newscast and interview set.
+            </p>
+          </div>
+          <div class="studio-img">
+            <img src={studio1.src} alt="Studio 1" />
+          </div>
         </div>
       </div>
     </section>
-    <section class="studio-section studio-2">
+    <section class="studio-section">
       <div class="container wrapper">
-        <div class="abt-studio">
-          <h2 class="font-header-2">Studio 2</h2>
-          <p class="reveal-text no-scrub">
-            Welcome to Studio Two, the ultimate destination for a diverse range
-            of productions, from news programs to talk shows and game shows.
-          </p>
+        <div class="abt-studio studio-2">
+          <div class="studio-text">
+            <h2 class="font-header-2 no-scrub">Studio 2</h2>
+            <p class="reveal-text no-scrub">
+              Welcome to Studio Two, the ultimate destination for a diverse
+              range of productions, from news programs to talk shows and game
+              shows.
+            </p>
+          </div>
+          <div class="studio-img">
+            <img src={studio2.src} alt="Studio 2" />
+          </div>
         </div>
       </div>
     </section>
-    <section class="studio-section studio-3">
+    <section class="studio-section">
       <div class="container wrapper">
-        <div class="abt-studio">
-          <h2 class="font-header-2">Virtual Studio</h2>
-          <p class="reveal-text no-scrub">
-            Welcome to the Virtual Studio experience at AGN Studios, where the
-            boundaries of imagination and reality blur seamlessly.
-          </p>
+        <div class="abt-studio studio-3">
+          <div class="studio-text">
+            <h2 class="font-header-2 no-scrub">Virtual Studio</h2>
+            <p class="reveal-text no-scrub">
+              Welcome to the Virtual Studio experience at AGN Studios, where the
+              boundaries of imagination and reality blur seamlessly.
+            </p>
+          </div>
+          <div class="studio-img">
+            <img src={studio3.src} alt="Virtual Studio" />
+          </div>
         </div>
       </div>
     </section>
-    <section class="studio-section studio-4">
+    <section class="studio-section">
       <div class="container wrapper">
-        <div class="abt-studio">
-          <h2 class="font-header-2">Green Screen</h2>
-          <p class="reveal-text no-scrub">
-            Welcome to the Virtual Studio experience at AGN Studios, where the
-            boundaries of imagination and reality blur seamlessly.
-          </p>
+        <div class="abt-studio studio-4">
+          <div class="studio-text">
+            <h2 class="font-header-2 no-scrub">Green Screen</h2>
+            <p class="reveal-text no-scrub">
+              The Green Screen Studio is a versatile space that can be used for
+              a variety of productions, from news programs to talk shows and game
+              shows.
+            </p>
+          </div>
+          <div class="studio-img">
+            <img src={studio4.src} alt="Studio 4" />
+          </div>
         </div>
       </div>
     </section>
+
     <section class="cta-section">
       <div class="container wrapper">
         <div class="cta-content text-center">
