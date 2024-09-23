@@ -15,7 +15,7 @@
       max-width: 650px;
       text-shadow: none;
       color: $clr-neutral-900;
-      margin-bottom: 5rem;
+      // margin-bottom: 5rem;
     }
 
     .glow {
@@ -27,52 +27,75 @@
       opacity: .7;
     }
   }
+
+  @media screen and (max-width: 1047px) {
+    height: 45vh;
+
+    .wrapper {
+      padding-top: 8rem;
+    }
+  }
+  @media screen and (max-width: 769px) {
+    height: 40vh;
+
+    .wrapper {
+      padding-top: 8rem;
+    }
+  }
 }
 
 .studio-section {
   margin-block-end: 2rem;
+
   .wrapper {
     width: 100%;
     height: 500px;
-    
+
     .abt-studio {
       padding: 3rem;
       display: flex;
       gap: 2rem;
       justify-content: space-between;
       align-items: center;
-      height: 100%; 
+      height: 100%;
       border-radius: 30px;
-      
+
       &.studio-1 {
         background-color: #2B2040;
       }
+
       &.studio-2 {
         background-color: #201F16;
       }
+
       &.studio-3 {
         background-color: #141C3A;
       }
+
       &.studio-4 {
         background-color: #112B15;
       }
+
       .studio-text {
         width: 40%;
+
         h2 {
           color: $clr-neutral-100;
           margin-bottom: $size-300;
         }
+
         p {
           color: $clr-neutral-100;
           opacity: .85;
         }
       }
-      
+
       .studio-img {
         width: 50%;
         height: 100%;
         overflow: hidden;
         border-radius: 20px;
+
         img {
           width: 100%;
           height: 100%;
@@ -80,10 +103,36 @@
         }
       }
     }
+
+    @media screen and (max-width:850px) {
+      height: 400px;
+    }
+
+    @media screen and (max-width:740px) {
+      height: 550px;
+
+      .abt-studio {
+        padding: 2rem;
+        flex-direction: column-reverse;
+
+        .studio-text,
+        .studio-img {
+          width: 100%;
+        }
+      }
+    }
+
+    @media screen and (max-width:426px) {
+
+      .abt-studio {
+        padding: 1rem 1rem 3rem;
+      }
+    }
   }
 }
 
 .cta-section {
+  margin-block-start: 10rem;
   padding-block: 4rem 0;
   background-color: $clr-neutral-800;
 

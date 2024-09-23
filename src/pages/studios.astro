@@ -89,8 +89,8 @@ import studio4 from "../assets/studio-d.png";
             <h2 class="font-header-2 no-scrub">Green Screen</h2>
             <p class="reveal-text no-scrub">
               The Green Screen Studio is a versatile space that can be used for
-              a variety of productions, from news programs to talk shows and game
-              shows.
+              a variety of productions, from news programs to talk shows and
+              game shows.
             </p>
           </div>
           <div class="studio-img">
@@ -99,7 +99,7 @@ import studio4 from "../assets/studio-d.png";
         </div>
       </div>
     </section>
-
+    <div class="end-animation"></div>
     <section class="cta-section">
       <div class="container wrapper">
         <div class="cta-content text-center">
@@ -120,3 +120,40 @@ import studio4 from "../assets/studio-d.png";
 
   <Footer />
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  // Ensure GSAP and ScrollTrigger are loaded
+  gsap.registerPlugin(ScrollTrigger);
+  //animation
+  const cardsWrapper = gsap.utils.toArray(".studio-section");
+  const cardsEl = gsap.utils.toArray<HTMLElement>(".studio-section .wrapper");
+
+  cardsWrapper.forEach((e, i) => {
+    const card = cardsEl[i];
+    let scale = 1,
+      rotate = 0;
+
+    if (i !== cardsEl.length - 1) {
+      scale = 0.9 + 0.025 * i;
+      rotate = -10;
+    }
+
+    gsap.to(card, {
+      scale: scale,
+      rotationX: rotate,
+      transformOrigin: "top center",
+      ease: "none",
+      scrollTrigger: {
+        trigger: e as HTMLElement,
+        start: "top " + (70 + 40 * i),
+        end: "bottom +=650px",
+        endTrigger: ".end-animation",
+        pin: e as HTMLElement,
+        pinSpacing: false,
+        scrub: true,
+      },
+    });
+  });
+</script>
