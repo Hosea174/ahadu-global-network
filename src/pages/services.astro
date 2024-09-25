@@ -4,7 +4,7 @@ import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import { Icon } from "astro-icon/components";
+// import { Icon } from "astro-icon/components";
 
 // styles
 import "../styles/pages/_services.scss";
@@ -73,7 +73,9 @@ import studio4 from "../assets/studio4-bento.png";
               data-image-src={worldWideContent.src}
             >
               <div class="accordion-header">
-                <h3 class="font-header-3 no-scrub">World-Wide Content Delivery</h3>
+                <h3 class="font-header-3 no-scrub">
+                  World-Wide Content Delivery
+                </h3>
                 <!-- <div class="icon">
                   <img src={plus.src} alt="">
                 </div> -->
@@ -141,7 +143,9 @@ import studio4 from "../assets/studio4-bento.png";
             </div>
             <div class="accordion-item" data-image-src={studio.src}>
               <div class="accordion-header">
-                <h3 class="font-header-3 no-scrub">Full Equipment Studio Rental</h3>
+                <h3 class="font-header-3 no-scrub">
+                  Full Equipment Studio Rental
+                </h3>
                 <!-- <div class="icon">
                   <img src={plus.src} alt="">
                 </div> -->
@@ -157,7 +161,9 @@ import studio4 from "../assets/studio4-bento.png";
             </div>
             <div class="accordion-item" data-image-src={workspace.src}>
               <div class="accordion-header">
-                <h3 class="font-header-3 no-scrub">Post-Production Workspace</h3>
+                <h3 class="font-header-3 no-scrub">
+                  Post-Production Workspace
+                </h3>
                 <!-- <div class="icon">
                   <img src={plus.src} alt="">
                 </div> -->
@@ -267,3 +273,22 @@ import studio4 from "../assets/studio4-bento.png";
 </Layout>
 
 <script src="../scripts/pages/services.js"></script>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  // Ensure GSAP and ScrollTrigger are loaded
+  gsap.registerPlugin(ScrollTrigger);
+  // clip-path animation on scroll for the image with class .abt-img-wrap
+  gsap.to(".hero-content .img-wrap img", {
+    clipPath: "inset(0% 0% 0% 0% round 20px)",
+    duration: 1,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".hero-content",
+      start: "top 80%",
+      end: "bottom 20%",
+      scrub: false,
+    },
+  });
+</script>

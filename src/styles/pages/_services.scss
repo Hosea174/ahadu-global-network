@@ -33,6 +33,7 @@
         border-radius: 20px;
 
         img {
+          clip-path: inset(0% 0% 100% 0% round 20px);
           object-fit: cover;
           width: 100%;
           height: 100%;
