@@ -58,7 +58,9 @@ const buttonClass = isNavLight
         text="Contact Us"
         icon={isNavLight ? "message-light" : "message"}
       />
-      <button class="nav-toggler" aria-label="Hamburger menu"><span></span></button>
+      <button class="nav-toggler" aria-label="Hamburger menu"
+        ><span></span></button
+      >
     </div>
   </div>
 </header>
@@ -110,7 +112,9 @@ const buttonClass = isNavLight
   document.addEventListener("DOMContentLoaded", function () {
     const pages = window.location.pathname.split("/");
     const links = document.querySelectorAll(".nav-link");
-    const home = document.querySelector("a[data-page='home']").closest(".nav-link");
+    const home = document
+      .querySelector("a[data-page='home']")
+      .closest(".nav-link");
 
     links.forEach((link) => {
       const linkPage = link.querySelector("a").getAttribute("data-page");
@@ -119,5 +123,12 @@ const buttonClass = isNavLight
         home.classList.remove("active");
       }
     });
+    if (
+      ["terms-and-conditions", "privacy-policy", "404"].some((page) =>
+        pages.includes(page)
+      )
+    ) {
+      home.classList.remove("active");
+    }
   });
 </script>
