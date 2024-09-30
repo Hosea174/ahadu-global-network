@@ -5,7 +5,7 @@ footer {
   position: relative;
 
   .footer-wrapper {
-    color: #EEEBEB;
+    color: #eeebebeb;
     display: grid;
     grid-template-columns: .8fr 1fr 1fr;
     align-items: center;
@@ -54,6 +54,13 @@ footer {
     .footer-links {
       display: flex;
       gap: 2.5rem;
+
+      .footer-link {
+        transition: ease-in-out .2s color;
+        &:hover {
+          color: #fff;
+        }
+      }
     }
 
     .footer-links li,

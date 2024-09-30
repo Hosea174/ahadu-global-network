@@ -14,16 +14,36 @@ import { Icon } from "astro-icon/components";
       </p>
       <div class="social-links">
         <a href="/" class="social">
-          <Icon name="facebook" aria-label="facebook page" width={28} height={28} />
+          <Icon
+            name="facebook"
+            aria-label="facebook page"
+            width={28}
+            height={28}
+          />
         </a>
         <a href="/" class="social">
-          <Icon name="twitter" aria-label="twitter page" width={28} height={28} />
+          <Icon
+            name="twitter"
+            aria-label="twitter page"
+            width={28}
+            height={28}
+          />
         </a>
         <a href="/" class="social">
-          <Icon name="youtube" aria-label="youtube page" width={28} height={28} />
+          <Icon
+            name="youtube"
+            aria-label="youtube page"
+            width={28}
+            height={28}
+          />
         </a>
         <a href="/" class="social">
-          <Icon name="instagram" aria-label="instagram page" width={28} height={28} />
+          <Icon
+            name="instagram"
+            aria-label="instagram page"
+            width={28}
+            height={28}
+          />
         </a>
       </div>
       <hr />
@@ -47,16 +67,20 @@ import { Icon } from "astro-icon/components";
         </ul>
         <ul role="list" class="links-col-2">
           <li class="footer-link">
-            <a href="/studio#" aria-label="Studio 1">Studio 1</a>
+            <a href="/studios#studio-1" aria-label="Studio 1">Studio 1</a>
           </li>
           <li class="footer-link">
-            <a href="/studio#" aria-label="Studio 2">Studio 2</a>
+            <a href="/studios#studio-2" aria-label="Studio 2">Studio 2</a>
           </li>
           <li class="footer-link">
-            <a href="/studio#" aria-label="Virtual Screen">Virtual Screen</a>
+            <a href="/studios#virtual-studio" aria-label="Virtual Studio"
+              >Virtual Studio</a
+            >
           </li>
           <li class="footer-link">
-            <a href="/studio#" aria-label="Green Screen">Green Screen</a>
+            <a href="/studios#green-screen" aria-label="Green Screen"
+              >Green Screen</a
+            >
           </li>
         </ul>
         <ul role="list" class="links-col-3">
@@ -69,8 +93,8 @@ import { Icon } from "astro-icon/components";
             >
           </li>
           <li class="footer-link">
-            <a href="/terms-and-services" aria-label="Terms and Services"
-              >Terms and Services</a
+            <a href="/terms-and-conditions" aria-label="Terms and Conditions"
+              >Terms and Conditions</a
             >
           </li>
         </ul>
@@ -79,10 +103,20 @@ import { Icon } from "astro-icon/components";
     <div class="col-3">
       <h3 class="footer-heading">Contacts</h3>
       <p class="contact-info">AHADU GLOBAL NETWORK LLC</p>
-      <p class="contact-info">
+      <a
+        class="contact-info"
+        style="display: block;"
+        href="https://maps.app.goo.gl/n8xxdxeQw3huyHPa7"
+      >
         1300 Pennsylvania Ave NW, Washington, DC 20004, United States
-      </p>
-      <p class="contact-info">info@ahaduglobal.com</p>
+      </a>
+      <a
+        class="contact-info"
+        style="display: block;"
+        href="mailto:info@ahaduglobal.com"
+      >
+        info@ahaduglobal.com
+      </a>
       <p class="contact-info">+1 202 599 7790</p>
     </div>
   </div>
