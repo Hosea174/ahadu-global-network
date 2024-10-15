@@ -24,6 +24,9 @@ const heroBackgrounds = new Swiper(".hero-swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  autoplay: {
+    delay: 5500,
+  },
 });
 // swiper js gallery carousel
 const galleryCarousel = new Swiper(".gallery-carousel", {

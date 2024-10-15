@@ -34,16 +34,17 @@ header {
       gap: 10px;
       padding-inline: 10px;
       border-radius: 60px;
-      background: linear-gradient(90deg, #DCE3EB 0.11%, #EDDBE0 99.89%);
+      background: linear-gradient(90deg, #F4ECE2 0.11%, #E4E8EB 99.98%);
 
       .nav-link {
         padding: 16px 15px;
         position: relative;
 
         a {
-          transition: color 0.3s ease-in-out;
+          transition: opacity 0.3s ease-in-out;
+
           &:hover {
-            color: #084559;
+            opacity: .75;
           }
         }
 
@@ -69,7 +70,7 @@ header {
     &.nav-light {
       .nav-menu .nav-links {
         color: $clr-neutral-100;
-        background: linear-gradient(90deg, rgba(63, 146, 187, 0.48) 0.14%, rgba(227, 80, 80, 0.34) 121.7%);
+        background: linear-gradient(90deg, rgb(20, 49, 63) 0.14%, rgb(49, 42, 34) 121.7%);
 
         .nav-link.active::before {
           background-color: $clr-neutral-100;

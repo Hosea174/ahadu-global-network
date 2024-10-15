@@ -28,7 +28,7 @@
         width: 100%;
         height: 100%;
         min-width: 520px;
-        max-width: 780px;
+        max-width: 830px;
         overflow: hidden;
         border-radius: 20px;
 
@@ -102,7 +102,7 @@
 
 .benefits-section {
   margin-block: 5rem;
-  background-color: #143340;
+  background: linear-gradient(180deg, #074353 -27.63%, #012D39 100%);
   border-radius: 60px;
 
   .wrapper {
@@ -267,8 +267,13 @@
         padding: 1rem !important;
       }
 
+      .studio-link {
+        height: fit-content;
+        width: 100%;
+      }
+
       .rental-img-wrap {
-        height: 250px !important;
+        height: 290px !important;
       }
 
       // Tablet layout (6 columns)
@@ -282,22 +287,22 @@
           grid-row: 1 / span 2;
         }
 
-        .rental-img-wrap:nth-child(2) {
+        .studio-link:nth-child(2) {
           grid-column: 4 / span 3;
           grid-row: 1;
         }
 
-        .rental-img-wrap:nth-child(3) {
+        .studio-link:nth-child(3) {
           grid-column: 1 / span 3;
           grid-row: 3;
         }
 
-        .rental-img-wrap:nth-child(4) {
+        .studio-link:nth-child(4) {
           grid-column: 4 / span 3;
           grid-row: 2;
         }
 
-        .rental-img-wrap:nth-child(5) {
+        .studio-link:nth-child(5) {
           grid-column: 4 / span 3;
           grid-row: 3;
         }
@@ -313,22 +318,22 @@
           grid-row: 1 / span 2;
         }
 
-        .rental-img-wrap:nth-child(2) {
+        .studio-link:nth-child(2) {
           grid-column: 4 / span 4;
           grid-row: 1;
         }
 
-        .rental-img-wrap:nth-child(3) {
+        .studio-link:nth-child(3) {
           grid-column: 8 / span 5;
           grid-row: 1;
         }
 
-        .rental-img-wrap:nth-child(4) {
+        .studio-link:nth-child(4) {
           grid-column: 4 / span 5;
           grid-row: 2;
         }
 
-        .rental-img-wrap:nth-child(5) {
+        .studio-link:nth-child(5) {
           grid-column: 9 / span 4;
           grid-row: 2;
         }
@@ -343,6 +348,8 @@
         border-radius: 10px;
 
         .studio-name {
+          background: linear-gradient(90deg, rgba(255, 196, 163, 0.70) 0%, rgba(172, 222, 246, 0.82) 100%);
+          backdrop-filter: blur(2px);
           position: absolute;
           bottom: 1rem;
           left: 1rem;
@@ -357,7 +364,7 @@
       }
 
       .rental-cta {
-        background: linear-gradient(0deg, #ABE0F6 0%, #DBE2E7 32.15%, #FAE4DD 100%);
+        background: linear-gradient(0deg, #FFB78D 0%, #FFD4BD 100%);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -431,6 +438,8 @@
           padding: 12px 15px;
           border: none;
           background: $clr-primary-400;
+          color: white;
+          cursor: pointer;
         }
       }
 

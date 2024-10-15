@@ -18,6 +18,7 @@ import photo4 from "../assets/photo4.png";
 import cameraEquipment from "../assets/camera-equipment.png";
 import heroBackground from "../assets/home-hero-bg.png";
 import heroBackground2 from "../assets/home-hero-bg-2.png";
+import heroBackground3 from "../assets/home-hero-bg-3.png";
 
 // icons
 import audioElement from "../icons/audio-element.svg";
@@ -75,7 +76,11 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
                 alt=""
                 class="swiper-slide bg-img"
               />
-              <img src={photo2.src} alt="" class="swiper-slide bg-img" />
+              <img
+                src={heroBackground3.src}
+                alt=""
+                class="swiper-slide bg-img"
+              />
             </div>
 
             <div class="hero-text-box">
@@ -105,16 +110,36 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
 
             <div class="social-links">
               <a href="/" class="social">
-                <Icon name="facebook" aria-label="facebook page" width={28} height={28} />
+                <Icon
+                  name="facebook"
+                  aria-label="facebook page"
+                  width={28}
+                  height={28}
+                />
               </a>
               <a href="/" class="social">
-                <Icon name="twitter" aria-label="twitter page" width={28} height={28} />
+                <Icon
+                  name="twitter"
+                  aria-label="twitter page"
+                  width={28}
+                  height={28}
+                />
               </a>
               <a href="/" class="social">
-                <Icon name="youtube" aria-label="youtube page" width={28} height={28} />
+                <Icon
+                  name="youtube"
+                  aria-label="youtube page"
+                  width={28}
+                  height={28}
+                />
               </a>
               <a href="/" class="social">
-                <Icon name="instagram" aria-label="instagram page" width={28} height={28} />
+                <Icon
+                  name="instagram"
+                  aria-label="instagram page"
+                  width={28}
+                  height={28}
+                />
               </a>
             </div>
           </div>
@@ -122,18 +147,26 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
 
         <div class="hero-studios">
           <div class="studios-container">
-            <a href="/" class="studio"
-              ><span class="label-highlight">Studio 1</span></a
-            >
-            <a href="/" class="studio"
-              ><span class="label-highlight">Studio 2</span></a
-            >
-            <a href="/" class="studio"
-              ><span class="label-highlight">Virtual Studio</span></a
-            >
-            <a href="/" class="studio"
-              ><span class="label-highlight">Green Screen</span></a
-            >
+            <div class="studio-wrap">
+              <a href="/" class="studio"
+                ><span class="label-highlight">Studio 1</span></a
+              >
+            </div>
+            <div class="studio-wrap">
+              <a href="/" class="studio"
+                ><span class="label-highlight">Studio 2</span></a
+              >
+            </div>
+            <div class="studio-wrap">
+              <a href="/" class="studio"
+                ><span class="label-highlight">Virtual Studio</span></a
+              >
+            </div>
+            <div class="studio-wrap">
+              <a href="/" class="studio"
+                ><span class="label-highlight">Green Screen</span></a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -193,7 +226,7 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
             href="/services"
             icon="btn-arrow-light"
           />
-          <p class="services-description reveal-text">
+          <p class="services-description reveal-text no-scrub">
             We pride ourselves on our exceptional team of talented professionals
             and our wide range of media production services. We offer a variety
             of services, including live production, media services, studio
@@ -319,7 +352,8 @@ import reliabilityIcon from "../icons/reliability-icon.svg";
             From concept to completion, our all-in-one media production services
             offer the expertise, equipment, and creativity you need to bring
             your vision to life, whether you're streaming a live event,
-            producing a commercial, or renting a studio space, we got you covered!
+            producing a commercial, or renting a studio space, we got you
+            covered!
           </p>
           <Button
             text="Contact Us"

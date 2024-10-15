@@ -115,7 +115,7 @@
 
         .hero-text-box {
           border-left: 2px solid;
-          border-image: linear-gradient(180deg, rgba(24, 158, 225, 0.20) 0%, #189EE1 50%, rgba(24, 158, 225, 0.20) 100%) 1;
+          border-image: linear-gradient(180deg, rgba(255, 110, 31, 0.20) 0%, #FF6E1F 50%, rgba(255, 110, 31, 0.20) 100%) 1;
           padding-inline: 1.25rem;
           position: relative;
           top: 2.5rem;
@@ -155,14 +155,17 @@
           gap: .35rem;
           align-items: flex-end;
           z-index: 2;
+
           .social {
             width: 28px;
             height: 28px;
             transition: transform 0.4s ease-in-out;
+
             svg {
               background-image: linear-gradient(90deg, rgba(238, 250, 255, 0.82) 0%, rgba(255, 211, 211, 0.82) 100%);
               border-radius: 50%;
             }
+
             &:hover {
               transform: translateY(-5px);
             }
@@ -233,39 +236,46 @@
         display: none;
       }
 
-      .studio {
-        scroll-snap-align: start;
-        height: 200px;
-        width: 25%;
-        position: relative;
+      .studio-wrap {
+        overflow: hidden;
+        width: 100%;
+        height: fit-content;
         border-radius: 15px;
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        filter: grayscale(80%);
-        cursor: pointer;
-        transition: background-size 5.4s cubic-bezier(0.25, 0.74, 0.22, 0.99), filter 0.4s ease-in-out;
 
-        &:nth-child(1) {
+        .studio {
+          display: block;
+          scroll-snap-align: start;
+          height: 200px;
+          width: 100%;
+          position: relative;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          filter: grayscale(80%);
+          cursor: pointer;
+          transition: transform 5.4s cubic-bezier(0.25, 0.74, 0.22, 0.99), filter 0.4s ease-in-out;
+
+          &:hover {
+            filter: grayscale(0%);
+            transform: scale(1.02); // Zoom in effect
+            // background-size: 110% 110%;
+          }
+        }
+
+        &:nth-child(1) .studio {
           background-image: url('../../assets/studio-1.png');
         }
 
-        &:nth-child(2) {
+        &:nth-child(2) .studio {
           background-image: url('../../assets/studio-2.png');
         }
 
-        &:nth-child(3) {
+        &:nth-child(3) .studio {
           background-image: url('../../assets/virtual-studio.png');
         }
 
-        &:nth-child(4) {
+        &:nth-child(4) .studio {
           background-image: url('../../assets/green-screen.png');
-        }
-
-        &:hover {
-          filter: grayscale(0%);
-          // transform: scale(1.1); // Zoom in effect
-          background-size: 110% 110%;
         }
       }
 
@@ -274,11 +284,13 @@
         bottom: 1rem;
         left: 1rem;
         padding: 3px 15px;
+        background: linear-gradient(90deg, rgba(255, 196, 163, 0.70) 0%, rgba(172, 222, 246, 0.82) 100%);
+        backdrop-filter: blur(2px);
       }
     }
 
     @media screen and (max-width: 850px) {
-      .studios-container .studio {
+      .studios-container .studio-wrap {
         min-width: 35vw;
       }
     }
@@ -289,7 +301,7 @@
       .studios-container {
         gap: 1rem;
 
-        .studio {
+        .studio-wrap {
           min-width: 65vw;
         }
       }
@@ -462,6 +474,10 @@
       gap: 2rem;
 
       .services-header {
+        .label-highlight {
+          background: linear-gradient(90deg, rgba(255, 196, 163, 0.70) 0%, rgba(172, 222, 246, 0.82) 100%);
+        }
+
         h2 {
           text-shadow: none;
           margin-top: $size-450;
@@ -580,7 +596,7 @@
         border-radius: 20px;
         border: 1px solid #3A3939;
         padding: 26px;
-        background: linear-gradient(90deg, #F9ECEC 0%, rgba(234, 241, 248, 0.46) 100%);
+        background: linear-gradient(90deg, #f9f4ec 0%, rgba(234, 241, 248, 0.46) 100%);
         transition: all 0.4s ease-out;
         cursor: pointer;
 
@@ -594,8 +610,7 @@
         }
 
         &:hover {
-          background: linear-gradient(90deg, #364247 0%, #273033 100%);
-          background: #364247;
+          background: #063541;
 
           h3,
           p {
@@ -745,6 +760,7 @@
 
       .label-highlight {
         color: $clr-neutral-900;
+        background: linear-gradient(90deg, rgba(255, 196, 163, 0.7) 0%, rgba(172, 222, 246, 0.82) 100%);
       }
     }
   }
@@ -789,6 +805,8 @@
           padding: 12px 15px;
           border: none;
           background: $clr-primary-400;
+          color: white;
+          cursor: pointer;
         }
       }
 
