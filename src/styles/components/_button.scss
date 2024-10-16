@@ -15,6 +15,7 @@
     overflow: hidden;
     transition: all 0.2s ease-in;
     cursor: pointer;
+    color: #121212;
 
     &.btn-primary {
       background-color: $clr-primary-500;
