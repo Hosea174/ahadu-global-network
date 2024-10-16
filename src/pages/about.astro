@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 
 // styles
 import "../styles/pages/_about.scss";
@@ -63,9 +64,9 @@ import coreValues from "../icons/core-values.svg";
           />
         </div>
         <div class="abt-cta">
-          <div class="abt-img-wrap"><img src={abtCtaImg.src} alt="" /></div>
+          <div class="abt-img-wrap"><Image src={abtCtaImg} alt="" /></div>
           <div class="cta-card">
-            <img src={audioElement.src} alt="" width="50" />
+            <Image src={audioElement} alt="" width="50" />
             <p class="fw-semi-bold reveal-text">
               Become part of the story, not the static.
             </p>
@@ -98,7 +99,7 @@ import coreValues from "../icons/core-values.svg";
         <div class="agn-profile">
           <div class="mission-card">
             <div>
-              <img src={mission.src} alt="" />
+              <Image src={mission} alt="" />
               <h3 class="font-header-3">Our Mission</h3>
               <p class="reveal-text">
                 To empower creators and brands by delivering cutting-edge media
@@ -110,7 +111,7 @@ import coreValues from "../icons/core-values.svg";
           </div>
           <div class="vision-card">
             <div>
-              <img src={vision.src} alt="" />
+              <Image src={vision} alt="" />
               <h3 class="font-header-3">Our Vision</h3>
               <p class="reveal-text">
                 To be a global leader in media production, revolutionizing the
@@ -122,7 +123,7 @@ import coreValues from "../icons/core-values.svg";
           </div>
           <div class="core-values">
             <div>
-              <img src={coreValues.src} alt="" />
+              <Image src={coreValues} alt="" />
               <h3 class="font-header-3">Our Core Values</h3>
               <div class="value">
                 <div class="value-name fw-semi-bold">
@@ -198,13 +199,13 @@ import coreValues from "../icons/core-values.svg";
             />
           </div>
           <div class="showcase-img wrap-1">
-            <img src={showcase1.src} alt="" />
+            <Image src={showcase1} alt="" />
           </div>
           <div class="showcase-img wrap-2">
-            <img src={showcase2.src} alt="" />
+            <Image src={showcase2} alt="" />
           </div>
           <div class="showcase-img wrap-3">
-            <img src={showcase3.src} alt="" />
+            <Image src={showcase3} alt="" />
           </div>
         </div>
       </div>

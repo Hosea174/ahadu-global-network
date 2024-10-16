@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 // import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 
 // styles
 import "../styles/pages/_services.scss";
@@ -43,13 +44,13 @@ import studio4 from "../assets/studio4-bento.png";
           <h1 class="font-header-1 no-scrub">
             State-of-the-art Media Production Solutions
           </h1>
-          <img src={designElement.src} alt="" />
+          <Image src={designElement} alt="" />
         </div>
         <div class="hero-content">
-          <div class="img-wrap"><img src={servicesHeroImg.src} alt="" /></div>
+          <div class="img-wrap"><Image src={servicesHeroImg} alt="" /></div>
           <div class="hero-text">
             <div class="services-description">
-              <img src={audioElement.src} alt="" />
+              <Image src={audioElement} alt="" />
             </div>
             <p class="reveal-text no-scrub">
               Our media production services offer a comprehensive solution for
@@ -58,7 +59,7 @@ import studio4 from "../assets/studio4-bento.png";
               streaming, production, and post-production, we have everything you
               need to bring your vision to life.
             </p>
-            <a href="#">Scroll down</a>
+            <a href="/contact" aria-label="Let's Chat">Let's Chat</a>
           </div>
         </div>
       </div>
@@ -77,7 +78,7 @@ import studio4 from "../assets/studio4-bento.png";
                   World-Wide Content Delivery
                 </h3>
                 <!-- <div class="icon">
-                  <img src={plus.src} alt="">
+                  <Image src={plus} alt="">
                 </div> -->
               </div>
               <div class="accordion-content">
@@ -87,7 +88,7 @@ import studio4 from "../assets/studio4-bento.png";
                   impact.
                 </p>
                 <div class="img-wrap">
-                  <img src={worldWideContent.src} alt="" />
+                  <Image src={worldWideContent} alt="" />
                 </div>
               </div>
             </div>
@@ -95,7 +96,7 @@ import studio4 from "../assets/studio4-bento.png";
               <div class="accordion-header">
                 <h3 class="font-header-3 no-scrub">Seamless Live Streaming</h3>
                 <!-- <div class="icon">
-                  <img src={plus.src} alt="">
+                  <Image src={plus} alt="">
                 </div> -->
               </div>
               <div class="accordion-content">
@@ -105,7 +106,7 @@ import studio4 from "../assets/studio4-bento.png";
                   every time.
                 </p>
                 <div class="img-wrap">
-                  <img src={liveStreaming.src} alt="" />
+                  <Image src={liveStreaming} alt="" />
                 </div>
               </div>
             </div>
@@ -113,7 +114,7 @@ import studio4 from "../assets/studio4-bento.png";
               <div class="accordion-header">
                 <h3 class="font-header-3 no-scrub">Audience-Rated Stages</h3>
                 <!-- <div class="icon">
-                  <img src={plus.src} alt="">
+                  <Image src={plus} alt="">
                 </div> -->
               </div>
               <div class="accordion-content">
@@ -122,14 +123,14 @@ import studio4 from "../assets/studio4-bento.png";
                   productions of all sizes, offering the flexibility and
                   convenience to bring any vision to life.
                 </p>
-                <div class="img-wrap"><img src={stage.src} alt="" /></div>
+                <div class="img-wrap"><Image src={stage} alt="" /></div>
               </div>
             </div>
             <div class="accordion-item" data-image-src={controlRoom.src}>
               <div class="accordion-header">
                 <h3 class="font-header-3 no-scrub">High-tech Control Rooms</h3>
                 <!-- <div class="icon">
-                  <img src={plus.src} alt="">
+                  <Image src={plus} alt="">
                 </div> -->
               </div>
               <div class="accordion-content">
@@ -138,7 +139,7 @@ import studio4 from "../assets/studio4-bento.png";
                   streamlining processes, saving you time and ensuring flawless
                   execution.
                 </p>
-                <div class="img-wrap"><img src={controlRoom.src} alt="" /></div>
+                <div class="img-wrap"><Image src={controlRoom} alt="" /></div>
               </div>
             </div>
             <div class="accordion-item" data-image-src={studio.src}>
@@ -147,7 +148,7 @@ import studio4 from "../assets/studio4-bento.png";
                   Full Equipment Studio Rental
                 </h3>
                 <!-- <div class="icon">
-                  <img src={plus.src} alt="">
+                  <Image src={plus} alt="">
                 </div> -->
               </div>
               <div class="accordion-content">
@@ -156,7 +157,7 @@ import studio4 from "../assets/studio4-bento.png";
                   fully equipped studio rental, supported by expert staff to
                   ensure every detail is perfect.
                 </p>
-                <div class="img-wrap"><img src={studio.src} alt="" /></div>
+                <div class="img-wrap"><Image src={studio} alt="" /></div>
               </div>
             </div>
             <div class="accordion-item" data-image-src={workspace.src}>
@@ -165,7 +166,7 @@ import studio4 from "../assets/studio4-bento.png";
                   Post-Production Workspace
                 </h3>
                 <!-- <div class="icon">
-                  <img src={plus.src} alt="">
+                  <Image src={plus} alt="">
                 </div> -->
               </div>
               <div class="accordion-content">
@@ -174,7 +175,7 @@ import studio4 from "../assets/studio4-bento.png";
                   spaces, equipped with cutting-edge technology to bring your
                   projects to life with precision and creativity.
                 </p>
-                <div class="img-wrap"><img src={workspace.src} alt="" /></div>
+                <div class="img-wrap"><Image src={workspace} alt="" /></div>
               </div>
             </div>
           </div>
@@ -184,7 +185,7 @@ import studio4 from "../assets/studio4-bento.png";
             Get industry-leading media production, with every project delivered
             to the highest standards.
           </h2>
-          <div class="img-wrap"><img src={worldWideContent.src} alt="" /></div>
+          <div class="img-wrap"><Image src={worldWideContent} alt="" /></div>
         </div>
       </div>
     </section>
@@ -225,27 +226,27 @@ import studio4 from "../assets/studio4-bento.png";
               />
             </div>
           </div>
-          <a class="studio-link" href="/">
+          <a class="studio-link" href="/studios#studio-1">
             <div class="rental-img-wrap studio">
-              <img src={studio1.src} alt="" />
+              <Image src={studio1} alt="" />
               <p class="studio-name label-highlight">Studio 1</p>
             </div>
           </a>
-          <a class="studio-link" href="/">
+          <a class="studio-link" href="/studios#studio-2">
             <div class="rental-img-wrap studio">
-              <img src={studio2.src} alt="" />
+              <Image src={studio2} alt="" />
               <p class="studio-name label-highlight">Studio 2</p>
             </div>
           </a>
-          <a class="studio-link" href="/">
+          <a class="studio-link" href="/studios#virtual-studio">
             <div class="rental-img-wrap studio">
-              <img src={studio3.src} alt="" />
+              <Image src={studio3} alt="" />
               <p class="studio-name label-highlight">Virtual Studio</p>
             </div>
           </a>
-          <a class="studio-link" href="/">
+          <a class="studio-link" href="/studios#green-screen">
             <div class="rental-img-wrap studio">
-              <img src={studio4.src} alt="" />
+              <Image src={studio4} alt="" />
               <p class="studio-name label-highlight">Green Screen</p>
             </div>
           </a>
@@ -255,7 +256,7 @@ import studio4 from "../assets/studio4-bento.png";
 
     <section class="newsletter-section">
       <div class="wrapper container">
-        <img src={glow.src} alt="" class="glow-effect" />
+        <Image src={glow} alt="" class="glow-effect" />
         <div class="newsletter-content text-center">
           <span class="label-highlight">Email Newsletter</span>
           <h2 class="font-header-2">

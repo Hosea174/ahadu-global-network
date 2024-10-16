@@ -126,7 +126,7 @@
 
           p {
             color: $clr-neutral-100;
-            max-width: 595px;
+            max-width: 600px;
             margin-block: $size-400 $size-500;
           }
 
@@ -263,19 +263,19 @@
         }
 
         &:nth-child(1) .studio {
-          background-image: url('../../assets/studio-1.png');
+          background-image: url('../../assets/studio-1.webp');
         }
 
         &:nth-child(2) .studio {
-          background-image: url('../../assets/studio-2.png');
+          background-image: url('../../assets/studio-2.webp');
         }
 
         &:nth-child(3) .studio {
-          background-image: url('../../assets/virtual-studio.png');
+          background-image: url('../../assets/virtual-studio.webp');
         }
 
         &:nth-child(4) .studio {
-          background-image: url('../../assets/green-screen.png');
+          background-image: url('../../assets/green-screen.webp');
         }
       }
 
@@ -397,7 +397,7 @@
         }
       }
 
-      @media screen and (max-width:890px) {
+      @media screen and (max-width:990px) {
         // position: inherit;
         position: unset;
         position: relative;
@@ -409,43 +409,40 @@
         transform: translateY(5rem);
 
         .image-wrap {
-          margin-inline: auto;
-
-          img {
-            width: 70vw;
+          &.right {
+            display: none;
           }
 
-          .photo1,
-          .photo2,
-          .photo3,
-          .photo4 {
-            margin: 0;
-          }
+          &.left {
 
-          .photo1 {
-            transform: rotate(-5.707deg);
-          }
+            margin-inline: auto;
 
-          .photo2 {
-            margin-top: -2.5rem;
-            margin-left: 2.5rem;
-            transform: rotate(5.707deg);
-          }
+            img {
+              width: 70vw;
+            }
 
-          .photo3 {
-            transform: rotate(5.707deg);
-          }
+            .photo1,
+            .photo2,
+            .photo3,
+            .photo4 {
+              margin: 0;
+            }
 
-          .photo4 {
-            margin-top: -2.5rem;
-            margin-left: -2.5rem;
-            transform: rotate(-5.707deg);
-          }
+            .photo1 {
+              transform: rotate(-5.707deg);
+            }
 
-          &:last-child {
-            flex-direction: column-reverse;
-          }
+            .photo2 {
+              margin-top: -2.5rem;
+              margin-left: 2.5rem;
+              transform: rotate(5.707deg);
+            }
 
+
+            &:last-child {
+              flex-direction: column-reverse;
+            }
+          }
         }
       }
     }
@@ -644,7 +641,7 @@
 }
 
 .gallery-section {
-  background-image: url("../../assets/bg-tiles.png");
+  background-image: url("../../assets/bg-tiles.webp");
   padding-block: 1rem;
 
   .wrapper {
@@ -737,7 +734,7 @@
 
 .cta-section {
   margin-block: 5rem;
-  background-image: url("../../assets/mic-cta-bg.png");
+  background-image: url("../../assets/mic-cta-bg.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -763,6 +760,10 @@
         background: linear-gradient(90deg, rgba(255, 196, 163, 0.7) 0%, rgba(172, 222, 246, 0.82) 100%);
       }
     }
+  }
+
+  @media screen and (max-width: 450px) {
+    background-image: url("../../assets/mic-cta-bg-mb.webp");
   }
 }
 
@@ -796,8 +797,13 @@
           border-radius: 5px;
           padding: 10px;
           width: 350px;
-          border: 1px solid rgba(4, 34, 49, 0.77);
+          border: 1px solid rgba(4, 34, 49, 0.589);
           background: #FFF8F8;
+
+          &:focus {
+            outline: none;
+            border: 1.5px solid $clr-primary-400;
+          }
         }
 
         button {
@@ -807,6 +813,10 @@
           background: $clr-primary-400;
           color: white;
           cursor: pointer;
+          transition: filter .5s ease-in-out;
+          &:hover {
+            filter: brightness(1.3);
+          }
         }
       }
 

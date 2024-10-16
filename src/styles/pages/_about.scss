@@ -2,7 +2,7 @@
 
 .abt-hero-section {
   min-height: 65vh;
-  background-image: url("../../assets/abt-hero-bg.png");
+  background-image: url("../../assets/abt-hero-bg.webp");
   background-size: cover;
   border-radius: 0 0 40px 40px;
   background-position: center;
@@ -412,8 +412,13 @@
           border-radius: 5px;
           padding: 10px;
           width: 350px;
-          border: 1px solid rgba(4, 34, 49, 0.77);
+          border: 1px solid rgba(4, 34, 49, 0.589);
           background: #FFF8F8;
+
+          &:focus {
+            outline: none;
+            border: 1.5px solid $clr-primary-400;
+          }
         }
 
         button {
@@ -423,6 +428,11 @@
           background: $clr-primary-400;
           color: white;
           cursor: pointer;
+          transition: filter .5s ease-in-out;
+
+          &:hover {
+            filter: brightness(1.3);
+          }
         }
       }
 
