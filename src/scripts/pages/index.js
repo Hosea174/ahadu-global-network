@@ -62,7 +62,7 @@ onMount(() => {
   gsap.to(".about-images img", commonAnimation);
 
   gsap.to(".photo1", {
-    rotate: -9.707,
+    // rotate: -9.707,
     scrollTrigger: {
       trigger: ".about-section",
       start: "top 80%",
@@ -72,7 +72,7 @@ onMount(() => {
   });
 
   gsap.to(".photo2", {
-    rotate: 9.707,
+    // rotate: 9.707,
     scrollTrigger: {
       trigger: ".about-section",
       start: "top 80%",
@@ -82,7 +82,7 @@ onMount(() => {
   });
 
   gsap.to(".photo3", {
-    rotate: 9.707,
+    // rotate: 9.707,
     scrollTrigger: {
       trigger: ".about-section",
       start: "top 80%",
@@ -92,7 +92,7 @@ onMount(() => {
   });
 
   gsap.to(".photo4", {
-    rotate: -9.707,
+    // rotate: -9.707,
     scrollTrigger: {
       trigger: ".about-section",
       start: "top 80%",
